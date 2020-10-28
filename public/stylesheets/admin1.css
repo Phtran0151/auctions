@@ -74,6 +74,12 @@ a:hover {
   }
 }
 
+.srouce{
+  text-align: center;
+  color: #ffffff;
+  padding: 10px;
+}
+
 .form-body .title {
   margin: 0;
   text-align: center;
