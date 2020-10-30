@@ -29,6 +29,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', require('./routes/admin/get.login'));
 app.use('/adminstration', require('./routes/admin/post.login'));
+app.use('/admin/dashboard', require('./routes/admin/get.dashboard'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
