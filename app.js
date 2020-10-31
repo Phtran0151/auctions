@@ -1,6 +1,7 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
+const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
@@ -11,10 +12,20 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// Body-parser
+// Session Express
+app.use(session({
+  secret: 'gradutes-finished',
+  resave: true,
+  saveUninitialized: true,
+  cookie: {
+    expires: 600000
+  }
+}));
 
+// Body-parser
 app.use(bodyParser.json()); // support json encoded bodies
-app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded borderImageSource = 'inherit'
+
 
 app.use(logger('dev'));
 app.use(express.json());

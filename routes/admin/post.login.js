@@ -3,12 +3,14 @@ const router = express.Router();
 
 /* POST admin login*/
 router.post('/', (req, res) => {
-  let { username, password } = req.body
+  let name = req.body.username
+  let password = req.body.password
   require('mongodb').connect(require('../path.mongodb'), (err, db) => {
-    db.collection("users").find().toArray((err, data) => {
+    db.collection("admin").find().toArray((err, data) => {
       let result = data[0]
-      if (username === result.username && password === result.password) {
-        res.render("admin/dashboard")
+      if (name === result.username && password === result.password) {
+        console.log(req.params)
+        res.render("admin/dashboard", { admin: result.username })
       } else {
         res.render("admin/login")
       }
@@ -17,4 +19,3 @@ router.post('/', (req, res) => {
 })
 
 module.exports = router;
-// admin1 ,pass: 123456
