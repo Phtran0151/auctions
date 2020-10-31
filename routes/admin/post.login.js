@@ -9,7 +9,6 @@ router.post('/', (req, res) => {
     db.collection("admin").find().toArray((err, data) => {
       let result = data[0]
       if (name === result.username && password === result.password) {
-        console.log(req.params)
         res.render("admin/dashboard", { admin: result.username })
       } else {
         res.render("admin/login")
