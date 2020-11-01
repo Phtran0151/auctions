@@ -1,4 +1,4 @@
-module.exports.adminIsLoggedIn = (req, res, next) => {
+module.exports.IsLoggedIn = (req, res, next) => {
   if (req.isAuthenticated()) {
     return next();
   }

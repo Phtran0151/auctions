@@ -30,12 +30,13 @@
           </div>
         </div>
       </div>
+      <!-- The form to sign in a account -->
       <div class="container-form">
         <div class="form-item log-in">
           <div class="table">
-            <form class="table-cell">
-              <input name="Username" placeholder="Username" type="text" />
-              <input name="Password" placeholder="Password" type="Password" />
+            <form class="table-cell" action="/loginUsers" method="POST">
+              <input name="username" placeholder="Username" type="text" />
+              <input name="password" placeholder="Password" type="Password" />
               <button class="btn">Log in</button>
             </form>
           </div>
