@@ -13,6 +13,7 @@ router.post('/', (req, res, next) => {
     fullname: req.body.fullname,
     username: req.body.username,
     password: bcrypt.hashSync(req.body.password, 10),
+    active: false,
     created: Date.now()
   }
   require('mongodb').connect(require('../path.mongodb'), (err, db) => {
