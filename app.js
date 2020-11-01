@@ -39,6 +39,7 @@ app.use('/admin/dashboard', require('./routes/auth').adminIsLoggedIn, require('.
 app.use('/adminstration', require('./routes/admin/post.login'));
 app.use('/logout', require('./routes/admin/destroy.dashboard'));
 app.use('/users/register', require('./routes/users/get.register'));
+app.use('/users', require('./routes/users/post.register'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
