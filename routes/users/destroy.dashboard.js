@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
   req.session.destroy((err) => {
     delete req.session;
-    res.redirect('/admin/login') // will always fire after session is destroyed
+    res.redirect('/users/register') // will always fire after session is destroyed
   })
 });
 
