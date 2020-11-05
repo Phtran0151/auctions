@@ -1,270 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+      <meta name="author" content="Coderthemes">
 
-  <title>Admin | Dashboard </title>
+      <link rel="shortcut icon" href="/assets/images/favicon.ico">
 
-  <link rel="stylesheet" href="../stylesheets/dashboard-admin/all.min.css">
-  <link rel="stylesheet" href="../stylesheets/dashboard-admin/overScroll.min.css">
-  <link rel="stylesheet" href="../stylesheets/dashboard-admin/adminlte.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-</head>
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-  <div class="wrapper">
-    <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-      <!-- Left navbar links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="index3.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Contact</a>
-        </li>
-      </ul>
+      <title>Adminto - Responsive Admin Dashboard Template</title>
 
-      <!-- SEARCH FORM -->
-      <form class="form-inline ml-3">
-        <div class="input-group input-group-sm">
-          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-navbar" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </div>
-      </form>
+      <!-- App css -->
+      <link href="../stylesheets/dashboard-admin/bootstrap.min.css" rel="stylesheet" type="text/css" />
+      <link href="../stylesheets/dashboard-admin/core.css" rel="stylesheet" type="text/css" />
+      <link href="../stylesheets/dashboard-admin/components.css" rel="stylesheet" type="text/css" />
+      <link href="../stylesheets/dashboard-admin/icons.css" rel="stylesheet" type="text/css" />
+      <link href="../stylesheets/dashboard-admin/pages.css" rel="stylesheet" type="text/css" />
+      <link href="../stylesheets/dashboard-admin/menu.css" rel="stylesheet" type="text/css" />
+      <link href="../stylesheets/dashboard-admin/responsive.css" rel="stylesheet" type="text/css" />
 
-      <!-- Right navbar links -->
-      <ul class="navbar-nav ml-auto">
-        <!-- Messages Dropdown Menu -->
-        <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="far fa-comments"></i>
-            <span class="badge badge-danger navbar-badge">3</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <a href="#" class="dropdown-item">
-              <!-- Message Start -->
-              <div class="media">
-                <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                <div class="media-body">
-                  <h3 class="dropdown-item-title">
-                    Brad Diesel
-                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                  </h3>
-                  <p class="text-sm">Call me whenever you can...</p>
-                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-                </div>
+      <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      <script src="../javascripts/js-admin/modernizr.min.js"></script>
+
+  </head>
+  <style>
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+  </style>
+
+  <body class="fixed-left">
+      <!-- Begin page -->
+      <div id="wrapper">
+          <!-- Top Bar Start -->
+          <div class="topbar">
+              <!-- LOGO -->
+              <div class="topbar-left">
+                <a href="index.html" class="logo"><span>Happy<span>Food</span></span><i class="zmdi zmdi-layers"></i></a>
               </div>
-              <!-- Message End -->
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <!-- Message Start -->
-              <div class="media">
-                <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                <div class="media-body">
-                  <h3 class="dropdown-item-title">
-                    John Pierce
-                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                  </h3>
-                  <p class="text-sm">I got your message bro</p>
-                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-                </div>
-              </div>
-              <!-- Message End -->
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <!-- Message Start -->
-              <div class="media">
-                <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                <div class="media-body">
-                  <h3 class="dropdown-item-title">
-                    Nora Silvester
-                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                  </h3>
-                  <p class="text-sm">The subject goes here</p>
-                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-                </div>
-              </div>
-              <!-- Message End -->
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+
+              <!-- Button mobile view to collapse sidebar menu -->
+              <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                  <!-- Page title -->
+                  <ul class="nav navbar-nav navbar-left">
+                    <li>
+                      <button class="button-menu-mobile open-left">
+                        <i class="zmdi zmdi-menu"></i>
+                      </button>
+                    </li>
+                    <li>
+                      <h4 class="page-title">Dashboard</h4>
+                    </li>
+                  </ul>
+
+                  <!-- Right(Notification and Searchbox -->
+                  <ul class="nav navbar-nav navbar-right">
+                    <li>
+                      <!-- Notification -->
+                      <div class="notification-box">
+                        <ul class="list-inline m-b-0">
+                            <li>
+                            </li>
+                        </ul>
+                      </div>
+                      <!-- End Notification bar -->
+                    </li>
+                  </ul>
+                </div><!-- end container -->
+              </div><!-- end navbar -->
           </div>
-        </li>
-        <!-- Notifications Dropdown Menu -->
-        <li class="nav-item dropdown">
-          <a class="nav-link" data-toggle="dropdown" href="#">
-            <i class="far fa-bell"></i>
-            <span class="badge badge-warning navbar-badge">15</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <span class="dropdown-item dropdown-header">15 Notifications</span>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="fas fa-envelope mr-2"></i> 4 new messages
-              <span class="float-right text-muted text-sm">3 mins</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="fas fa-users mr-2"></i> 8 friend requests
-              <span class="float-right text-muted text-sm">12 hours</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
-              <i class="fas fa-file mr-2"></i> 3 new reports
-              <span class="float-right text-muted text-sm">2 days</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button"><i
-              class="fas fa-th-large"></i></a>
-        </li>
-      </ul>
-    </nav>
-    <!-- /.navbar -->
+          <!-- Top Bar End -->
 
-    <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
-      <!-- Brand Logo -->
-      <a href="index3.html" class="brand-link">
-        <img src="../images/admin/avatar04.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-             style="opacity: .8">
-        <span class="brand-text font-weight-light"><%= admin %></span>
-      </a>
 
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <!-- Sidebar Menu -->
-        <nav class="mt-2">
-          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-            <li class="nav-item has-treeview menu-open">
-              <a href="/admin/dashboard" class="nav-link active">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Manager Users
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-            </li>
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-copy"></i>
-                <p>
-                  Products Auction
-                </p>
-              </a>
-            </li>
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-copy"></i>
-                <p>
-                  Products Action End
-                </p>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </aside>
+          <!-- ========== Left Sidebar Start ========== -->
+          <div class="left side-menu">
+            <div class="sidebar-inner slimscrollleft">
+              <!-- User -->
+              <div class="user-box">
+                  <div class="user-img">
+                      <img src="../images/admin/avatar-1.png" alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
+                      <div class="user-status offline"><i class="zmdi zmdi-dot-circle"></i></div>
+                  </div>
+                  <h5><a href="#">Mat Helme</a></h5>
+                  <ul class="list-inline">
+                    <li>
+                      <a href="/logout">
+                        <i class="fas fa-power-off" style="padding-left: 30px;"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-custom">
+                        <i class="zmdi zmdi-power"></i>
+                      </a>
+                    </li>
+                  </ul>
+              </div>
+              <!-- End User -->
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <div class="content-header">
-        <div class="container-fluid">
-          <div class="row mb-2">
-            <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Dashboard</h1>
-            </div>
-            <div class="col-sm-6">
-              <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active"><a href="/logout" style="list-style-type: none;">Log out</a></li>
-              </ol>
+              <!--- Sidemenu -->
+              <div id="sidebar-menu">
+                <ul>
+                  <li class="text-muted menu-title">Navigation</li>
+                  <li>
+                    <a href="/adminstration" class="waves-effect"><i class="zmdi zmdi-view-dashboard"></i> <span> Dashboard </span> </a>
+                  </li>
+                  <li>
+                    <a href="/paymentbill" class="waves-effect"><i class="fas fa-wallet"></i><span> Bill </span></a>
+                  </li>
+                  <li class="has_sub">
+                      <a href="javascript:void(0);" class="waves-effect"><i class="zmdi zmdi-view-list"></i> <span> Product </span> <span class="menu-arrow"></span></a>
+                      <ul class="list-unstyled">
+                          <li><a href="/admin-set/drinks"><i class="fa fa-cocktail"></i>Drinks</a></li>
+                          <li><a href="/admin-set/breads"><i class="fas fa-cookie"></i>Breads</a></li>
+                          <li><a href="/admin-set/fruits"><i class="fas fa-lemon"></i>Fruits</a></li>
+                          <li><a href="/admin-set/meat"><i class="fas fa-drumstick-bite"></i>Meat</a></li>
+                          <li><a href="/admin-set/chicken"><i class="fas fa-drumstick-bite"></i>Chicken</a></li>
+                          <li><a href="/admin-set/seafood"><i class="fas fa-fish"></i>SeaFood</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="/email-guest" class="waves-effect"><i class="zmdi zmdi-email"></i><span> Mail </span></a>
+                  </li>
+                </ul>
+                <div class="clearfix"></div>
+              </div>
+              <!-- Sidebar -->
+              <div class="clearfix"></div>
             </div>
           </div>
-        </div>
+          <!-- Left Sidebar End -->
+          <!-- ============================================================== -->
+          <!-- Start right Content here -->
+          <!-- ============================================================== -->
+          <div class="content-page">
+            <!-- Start content -->
+            <div class="content">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="card-box">
+                            <div class="table-responsive" style="width: 100%">
+                              <table class="table m-0" id="tableEmail">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Ngày đăng</th>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Giá</th>
+                                        <th>Xoá</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="card-box">
+                              <div class="form-horizontal text-right" id="form-add">
+                                  <form id="formAddArea" action="/Allproduct" method="post" enctype="multipart/form-data">
+                                      <input type="number" id="date" style="display: none" name="Ngày">
+                                      <div class="form-group row">
+                                          <div class="col-xs-4">
+                                              <input type="text" placeholder="Tên sản phẩm " name="pro_name" id="title" class="form-control m-b-5 col-xs-3">
+                                          </div>
+                                          <div class="col-xs-4">
+                                              <input type="number" pattern="!e" min="0" placeholder="Giá" name="price" id="price" class="form-control m-b-5 col-xs-3">
+                                          </div>
+                                          <div class="col-xs-4">
+                                              <input type="file" name="image_pro" id="image_pro" class="form-control m-b-5 col-xs-3">
+                                          </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="details">Mô tả chi tiết:</label>
+                                          <textarea class="form-control" placeholder="Mô tả chi tiết..." name="Chi tiết" style="resize: none;" id="details"></textarea>
+                                      </div>
+                                      <button type="submit" id="submit" class="btn btn-primary waves-effect w-md waves-light m-b-5 m-t-5">Gửi</button>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- end row -->
+                </div> <!-- container -->
+            </div> <!-- content -->
+
+            <footer class="footer text-right">
+                <%-new Date().getFullYear()%> Copyright by © Tran Duc Phuong.
+            </footer>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Right content here -->
+          <!-- ============================================================== -->
+          <!-- Right Sidebar -->
+          <div class="side-bar right-bar">
+              <a href="javascript:void(0);" class="right-bar-toggle">
+                  <i class="zmdi zmdi-close-circle-o"></i>
+              </a>
+              <h4 class="">Notifications</h4>
+              <div class="notification-list nicescroll">
+                  <ul class="list-group list-no-border user-list">
+                      <li class="list-group-item">
+                          <a href="#" class="user-list-item">
+                              <div class="avatar">
+                                  <img src="/assets/images/users/avatar-2.jpg" alt="">
+                              </div>
+                              <div class="user-desc">
+                                  <span class="name">Michael Zenaty</span>
+                                  <span class="desc">There are new settings available</span>
+                                  <span class="time">2 hours ago</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="list-group-item">
+                          <a href="#" class="user-list-item">
+                              <div class="icon bg-info">
+                                  <i class="zmdi zmdi-account"></i>
+                              </div>
+                              <div class="user-desc">
+                                  <span class="name">New Signup</span>
+                                  <span class="desc">There are new settings available</span>
+                                  <span class="time">5 hours ago</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="list-group-item">
+                          <a href="#" class="user-list-item">
+                              <div class="icon bg-pink">
+                                  <i class="zmdi zmdi-comment"></i>
+                              </div>
+                              <div class="user-desc">
+                                  <span class="name">New Message received</span>
+                                  <span class="desc">There are new settings available</span>
+                                  <span class="time">1 day ago</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="list-group-item active">
+                          <a href="#" class="user-list-item">
+                              <div class="avatar">
+                                  <img src="/assets/images/users/avatar-3.jpg" alt="">
+                              </div>
+                              <div class="user-desc">
+                                  <span class="name">James Anderson</span>
+                                  <span class="desc">There are new settings available</span>
+                                  <span class="time">2 days ago</span>
+                              </div>
+                          </a>
+                      </li>
+                      <li class="list-group-item active">
+                          <a href="#" class="user-list-item">
+                              <div class="icon bg-warning">
+                                  <i class="zmdi zmdi-settings"></i>
+                              </div>
+                              <div class="user-desc">
+                                  <span class="name">Settings</span>
+                                  <span class="desc">There are new settings available</span>
+                                  <span class="time">1 day ago</span>
+                              </div>
+                          </a>
+                      </li>
+
+                  </ul>
+              </div>
+          </div>
+          <!-- /Right-bar -->
+
       </div>
-
-      <!-- Main content -->
-      <section class="content">
-        <div class="container-fluid">
-            <div class="card">
-              <div class="card-header border-transparent">
-                <h3 class="card-title">Users List</h3>
-              </div>
-              <!-- /.card-header -->
-
-              <div class="card-body p-0">
-                <div class="table-responsive">
-                  <table class="table m-0">
-                    <thead>
-                      <tr>
-                        <th>ID User</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Fullname</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                        <td>Call of Duty IV</td>
-                        <td><span class="badge badge-success">Shipped</span></td>
-                        <td>
-                          <div class="sparkbar" data-color="#00a65a" data-height="20">90,80,90,-70,61,-83,63</div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <!-- /.card-body -->
-
-              <div class="card-footer clearfix">
-                <a href="javascript:void(0)" class="btn btn-sm btn-info float-left">Place New Order</a>
-                <a href="javascript:void(0)" class="btn btn-sm btn-secondary float-right">View All Orders</a>
-              </div><!-- /.card-footer -->
-            </div><!-- /.card -->
-          </div><!-- /.row -->
-        </div><!--/. container-fluid -->
-      </section>
-      <!-- /.content -->
-    </div>
-
-    <!-- Main Footer -->
-    <footer class="main-footer">
-      <strong>Copyright &copy; 2020 by Phuong Tran<a href="/"> Auctions.com</a>.</strong>
-      All rights reserved.
-      <div class="float-right d-none d-sm-inline-block"><b>Version</b> 1.0.0</div>
-    </footer>
-  </div>
-
-<!-- Links javascripts -->
-<script src="../javascripts/js-admin/jquery.min.js"></script>
-<script src="../javascripts/js-admin/bootstrap.bundle.min.js"></script>
-<script src="../javascripts/js-admin/jquery.overlayScrollbars.min.js"></script>
-<script src="../javascripts/js-admin/raphael.min.js"></script>
-<script src="../javascripts/js-admin/jquery.mousewheel.js"></script>
-<script src="../javascripts/js-admin/jquery.mapael.min.js"></script>
-<script src="../javascripts/js-admin/usa_states.min.js"></script>
-<script src="../javascripts/js-admin/Chart.min.js"></script>
-<script src="../javascripts/js-admin/demo.js"></script>
-<script src="../javascripts/js-admin/adminlte.js"></script>
-<script src="../javascripts/js-admin/pages/dashboard2.js"></script>
-
-</body>
+      <!-- END wrapper -->
+    <script>
+        var resizefunc = [];
+    </script>
+    <!-- jQuery  -->
+    <script src="../javascripts/js-admin/jquery.min.js"></script>
+    <script src="../javascripts/js-admin/bootstrap.min.js"></script>
+    <script src="../javascripts/js-admin/detect.js"></script>
+    <script src="../javascripts/js-admin/fastclick.js"></script>
+    <script src="../javascripts/js-admin/jquery.slimscroll.js"></script>
+    <script src="../javascripts/js-admin/jquery.blockUI.js"></script>
+    <script src="../javascripts/js-admin/waves.js"></script>
+    <script src="../javascripts/js-admin/jquery.nicescroll.js"></script>
+    <script src="../javascripts/js-admin/jquery.slimscroll.js"></script>
+    <script src="../javascripts/js-admin/jquery.scrollTo.min.js"></script>
+    <script src="../javascripts/js-admin/jquery.core.js"></script>
+    <script src="../javascripts/js-admin/jquery.app.js"></script>
+    <script src="../javascripts/js-admin/controlAdmin.js"></script>
+  </body>
 </html>
