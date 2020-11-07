@@ -9,15 +9,14 @@ router.post('/', (req, res, next) => {
     return re.test(String(email).toLowerCase());
   }
   let user = {
-    email: req.body.email,
-    fullname: req.body.fullname,
     username: req.body.username,
-    password: bcrypt.hashSync(req.body.password, 10),
+    email: req.body.email,
+    password: bcrypt.hashSync(req.body.password[0], 10),
     active: false,
     created: Date.now()
   }
   require('mongodb').connect(require('../path.mongodb'), (err, db) => {
-    if (validateEmail(user.email) && (user.fullname && user.username && user.password) !== '') {
+    if (validateEmail(user.email) && (user.username && user.password) !== '') {
       db.collection("users").insertOne(user, (err) => {
         db.close();
         if (!err) {

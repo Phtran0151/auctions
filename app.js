@@ -40,7 +40,7 @@ app.use('/admin/dashboard', require('./routes/auth').IsLoggedIn, require('./rout
 app.use('/adminstration', require('./routes/admin/post.login'));
 app.use('/logout', require('./routes/admin/destroy.dashboard'));
 app.use('/users/register', require('./routes/users/get.register'));
-app.use('/users', require('./routes/users/post.register'));
+app.use('/signup', require('./routes/users/post.register'));
 app.use('/loginUsers', require('./routes/users/post.login'));
 app.use('/users/dashboard', require('./routes/auth').IsLoggedIn, require('./routes/users/get.dashboard'));
 app.use('/signout', require('./routes/users/destroy.dashboard'));
