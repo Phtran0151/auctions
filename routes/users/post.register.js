@@ -12,6 +12,7 @@ router.post('/', (req, res, next) => {
     username: req.body.username,
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password[0], 10),
+    token: require('crypto').randomBytes(64).toString('hex'),
     active: false,
     created: Date.now()
   }
