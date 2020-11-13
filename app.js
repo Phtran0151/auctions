@@ -8,6 +8,9 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+// Using ENV
+require('dotenv').config()
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -65,5 +68,9 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(process.env.PORT || 3000, (err) => {
+  if (err) console.log("The server wrong is somewhere")
+})
 
 module.exports = app;

@@ -11,31 +11,29 @@ const upload = multer( { storage: storage } );
 router.post('/', (req, res, next) => {
   var pro = req.body
   let content = {
-    post_date: new Date(pro.date_post).now,
+    post_date: new Date(Date.now(pro.date_post)),
     name: pro.name_pro,
-    price: pro.price_pro.toLocaleString(),
+    price: pro.price_pro,
     bid_date: new Date(pro.bid_date),
     image: pro.images_pro,
     description: pro.description
   }
-  console.log(content)
-  // mongo.connect(path, (err, db) => {
-  //   req.body.image = req.file.path.split("public").join(".")
-  //   for (var i = 0; i < Object.keys(req.body).length; i++) {
-  //     if(!(isNaN(Object.values(req.body)[i])) && Object.keys(req.body)[i] !== "tel"){
-  //       req.body[`${Object.keys(req.body)[i]}`] = Number(Object.values(req.body)[i]);
-  //     }
-  //   }
-  //   db.collection(req.params.produce).insertOne(req.body, (err, result) => {
-  //     db.close()
-  //     console.log(result)
-  //     if(!err){
-  //       res.redirect(`/admin-set/${req.params.produce}`)
-  //     }else{
-  //       res.render("error")
-  //     }
-  //   })
-  // })
+  mongo.connect(path, (err, db) => {
+    // content.image = req.file.path.split("public").join(".")
+    for (var i = 0; i < Object.keys(content).length; i++) {
+      if(!(isNaN(Object.values(content)[i])) && Object.keys(content)[i] !== "tel"){
+        content[`${Object.keys(content)[i]}`] = Number(Object.values(content)[i]);
+      }
+    }
+    db.collection('product').insertOne(content, (err, result) => {
+      db.close()
+      if(!err){
+        res.redirect(`/dashboard/${content.image}`)
+      }else{
+        res.render("error")
+      }
+    })
+  })
 });
 
 module.exports = router;

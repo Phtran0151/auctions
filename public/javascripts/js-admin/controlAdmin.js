@@ -5,7 +5,7 @@
 // 	});
 // 	$(".btn-danger").click(function(event) {
 // 		var id = $(this).attr('id');
-// 		$.post(`/remove/${window.location.href.split("admin-set/")[1]}`, {_id: id}, function(data, textStatus, xhr) {
+// 		$.post(`/dashboard/${window.location.href.split("dashboard/")[1]}`, {_id: id}, function(data, textStatus, xhr) {
 // 			if(typeof data==="string"){
 // 				location.reload();
 // 			}
