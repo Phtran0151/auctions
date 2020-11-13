@@ -35,15 +35,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Use router
 app.use('/', require('./routes/index'));
+// App of adminstration
 app.use('/admin/login', require('./routes/admin/get.login'));
 app.use('/admin/dashboard', require('./routes/auth').IsLoggedIn, require('./routes/admin/get.dashboard'));
 app.use('/adminstration', require('./routes/admin/post.login'));
 app.use('/logout', require('./routes/admin/destroy.dashboard'));
+// App of users
 app.use('/users/register', require('./routes/users/get.register'));
 app.use('/signup', require('./routes/users/post.register'));
 app.use('/users/login', require('./routes/users/get.login'));
 app.use('/loginUsers', require('./routes/users/post.login'));
 app.use('/users/dashboard', require('./routes/auth').IsLoggedIn, require('./routes/users/get.dashboard'));
+app.use('/productsPost', require('./routes/products/post.products'));
+// App of products
 app.use('/signout', require('./routes/users/destroy.dashboard'));
 
 // catch 404 and forward to error handler
