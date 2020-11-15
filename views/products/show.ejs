@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+    <meta name="author" content="Coderthemes">
+
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico">
+
+    <title>Adminto - Admin Dashboard Page</title>
+
+    <!-- App css -->
+    <link href="../stylesheets/dashboard-admin/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/dashboard-admin/core.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/dashboard-admin/components.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/dashboard-admin/icons.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/dashboard-admin/pages.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/dashboard-admin/menu.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/dashboard-admin/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../stylesheets/dashboard-admin/jquery.datetimepicker.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="../javascripts/js-admin/modernizr.min.js"></script>
+
+  </head>
+  <style>
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  </style>
+
+  <body class="fixed-left">
+    <!-- Begin page -->
+    <div id="wrapper">
+      <!-- Top Bar Start -->
+      <div class="topbar">
+        <!-- LOGO -->
+        <div class="topbar-left">
+          <a href="/" class="logo">
+            <span>Auctions<span>Website</span></span>
+          </a>
+        </div>
+
+        <!-- Button mobile view to collapse sidebar menu -->
+        <div class="navbar navbar-default" role="navigation">
+          <div class="container">
+            <!-- Page title -->
+            <ul class="nav navbar-nav navbar-left">
+              <li>
+                <button class="button-menu-mobile open-left">
+                  <i class="zmdi zmdi-menu"></i>
+                </button>
+              </li>
+              <li>
+                <h4 class="page-title">Dashboard</h4>
+              </li>
+            </ul>
+
+            <!-- Right(Notification and Searchbox -->
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <!-- Notification -->
+                <div class="notification-box">
+                  <ul class="list-inline m-b-0">
+                    <li></li>
+                  </ul>
+                </div>
+                <!-- End Notification bar -->
+              </li>
+            </ul>
+          </div><!-- end container -->
+        </div><!-- end navbar -->
+      </div>
+      <!-- Top Bar End -->
+
+      <!-- ========== Left Sidebar Start ========== -->
+      <div class="left side-menu">
+        <div class="sidebar-inner slimscrollleft">
+          <!-- User -->
+          <div class="user-box">
+            <div class="user-img">
+                <img src="../images/admin/avatar-1.png" alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
+                <div class="user-status offline"><i class="zmdi zmdi-dot-circle"></i></div>
+            </div>
+            <h5><a href="#">Mat Helme</a></h5>
+            <ul class="list-inline">
+              <li>
+                <a href="/logout">
+                  <i class="fas fa-power-off" style="padding-left: 30px;"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-custom">
+                  <i class="zmdi zmdi-power"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- End User -->
+
+          <!--- Sidemenu -->
+          <div id="sidebar-menu">
+            <ul>
+              <li>
+                <a href="/adminstration" class="waves-effect">
+                  <i class="fas fa-sticky-note"></i><span>Add Product</span>
+                </a>
+              </li>
+              <li>
+                <a href="/paymentbill" class="waves-effect">
+                  <i class="fas fa-wallet"></i><span>Bill</span>
+                </a>
+              </li>
+              <li class="has_sub">
+                <a href="javascript:void(0);" class="waves-effect">
+                  <i class="fas fa-list"></i>
+                  <span> Product </span> <span class="menu-arrow"></span>
+                </a>
+                <ul class="list-unstyled">
+                  <li><a href="/admin-set/drinks"><i class="fa fa-cocktail"></i>Drinks</a></li>
+                  <li><a href="/admin-set/breads"><i class="fas fa-cookie"></i>Breads</a></li>
+                  <li><a href="/admin-set/fruits"><i class="fas fa-lemon"></i>Fruits</a></li>
+                  <li><a href="/admin-set/meat"><i class="fas fa-drumstick-bite"></i>Meat</a></li>
+                  <li><a href="/admin-set/chicken"><i class="fas fa-drumstick-bite"></i>Chicken</a></li>
+                  <li><a href="/admin-set/seafood"><i class="fas fa-fish"></i>SeaFood</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="/email-guest" class="waves-effect">
+                  <i class="fas fa-envelope-open"></i><span> All Users </span>
+                </a>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <!-- Sidebar -->
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- Left Sidebar End -->
+
+      <!-- Start right Content here -->
+      <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card-box">
+                  <div class="table-responsive" style="width: 100%">
+                    <table class="table m-0" id="tableEmail">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Date Posts</th>
+                          <th>Name Product</th>
+                          <th>Price</th>
+                          <th>Description</th>
+                          <th>Remove</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th><%= items._id %></th>
+                          <th><%= items.post_date %></th>
+                          <th><%= items.name %></th>
+                          <th><%= items.price %></th>
+                          <th><%= items.description %></th>
+                          <th>x</th>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="card-box">
+                  <div class="form-horizontal text-right" id="form-add">
+                    <form action="/productsPost" id="formAddArea" method="POST" enctype="multipart/form-data">
+                      <input type="number" id="date" style="display: none" name="date_post">
+                      <div class="form-group row">
+                        <div class="col-xs-4">
+                          <input type="text" placeholder="Name of product" name="name_pro" id="title" class="form-control m-b-5 col-xs-3">
+                        </div>
+                        <div class="col-xs-4">
+                          <input type="number" pattern="!e" min="0" placeholder="Price" name="price_pro" id="price" class="form-control m-b-5 col-xs-3">
+                        </div>
+                        <div class="col-xs-4" id="filters">
+                          <input type="text" name="bid_date" id="filter-date" class="form-control m-b-5 col-xs-3" placeholder="The auction closing time...">
+                        </div>
+                        <div class="col-xs-4" style="margin-top: 10px">
+                          <input type="file" name="images_pro" id="image_pro" class="form-control m-b-5 col-xs-3">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="details">Description:</label>
+                        <textarea class="form-control" placeholder="Description about item..." name="description" style="resize: none;" id="details"></textarea>
+                      </div>
+                      <input type="submit" id="submit" class="btn btn-primary m-b-5 m-t-5" value="Post Product">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end row -->
+          </div> <!-- container -->
+        </div> <!-- content -->
+
+        <footer class="footer text-right">
+          <%-new Date().getFullYear()%> Copyright by © Tran Duc Phuong.
+        </footer>
+      </div>
+      <!-- End Right content here -->
+    </div>
+    <!-- END wrapper -->
+
+    <!-- jQuery  -->
+    <script src="../javascripts/js-admin/jquery.min.js"></script>
+    <script src="../javascripts/js-admin/bootstrap.min.js"></script>
+    <script src="../javascripts/js-admin/detect.js"></script>
+    <script src="../javascripts/js-admin/fastclick.js"></script>
+    <script src="../javascripts/js-admin/jquery.slimscroll.js"></script>
+    <script src="../javascripts/js-admin/jquery.blockUI.js"></script>
+    <script src="../javascripts/js-admin/waves.js"></script>
+    <script src="../javascripts/js-admin/jquery.nicescroll.js"></script>
+    <script src="../javascripts/js-admin/jquery.slimscroll.js"></script>
+    <script src="../javascripts/js-admin/jquery.scrollTo.min.js"></script>
+    <script src="../javascripts/js-admin/jquery.core.js"></script>
+    <script src="../javascripts/js-admin/jquery.app.js"></script>
+    <script src="../javascripts/js-admin/controlAdmin.js"></script>
+    <script src="../javascripts/js-admin/jquery.datetimepicker.full.js"></script>
+    <script>
+      var resizefunc = [];
+      jQuery(document).ready(function () {
+        'use strict';
+        jQuery('#filter-date').datetimepicker();
+      });
+    </script>
+  </body>
+</html>

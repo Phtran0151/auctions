@@ -49,9 +49,10 @@ app.use('/signup', require('./routes/users/post.register'));
 app.use('/users/login', require('./routes/users/get.login'));
 app.use('/loginUsers', require('./routes/users/post.login'));
 app.use('/users/dashboard', require('./routes/auth').IsLoggedIn, require('./routes/users/get.dashboard'));
-app.use('/productsPost', require('./routes/products/post.products'));
-// App of products
 app.use('/signout', require('./routes/users/destroy.dashboard'));
+// App of products
+app.use('/productsPost', require('./routes/products/post.products'));
+app.use('/productsAll', require('./routes/products/get.products'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

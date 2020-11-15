@@ -25,14 +25,14 @@ router.post('/', upload.single('images_pro'), (req, res, next) => {
         content[`${Object.keys(content)[i]}`] = Number(Object.values(content)[i]);
       }
     }
-    db.collection('product').insertOne(content, (err, result) => {
-      db.close()
+    db.collection('products').insertOne(content, (err, result) => {
       if(!err){
-        res.render('/dashboard', {time_post: content.post_date, name: content.name, price: content.price})
+        res.redirect('/productsAll')
       }else{
         res.render("Something went wrong!")
       }
     })
+    db.close()
   })
 });
 
