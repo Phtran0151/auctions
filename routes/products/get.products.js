@@ -7,7 +7,7 @@ const path = require("../path.mongodb");
 router.get('/', function(req, res, next) {
   mongo.connect(path, (err, db) => {
     db.collection("products").find().toArray((err,result) => {
-      let product = result[0];
+      let product = result;
       res.render('products/show', { items: product })
     })
     db.close();

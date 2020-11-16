@@ -163,14 +163,16 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th><%= items._id %></th>
-                          <th><%= items.post_date %></th>
-                          <th><%= items.name %></th>
-                          <th><%= items.price %></th>
-                          <th><%= items.description %></th>
-                          <th>x</th>
-                        </tr>
+                        <% for(let i = 0; i < items.length; i++) { %>
+                          <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= (new Date(Number(items[i]['post_date'])).getDate()<=9)?"0"+new Date(Number(items[i]['post_date'])).getDate():new Date(Number(items[i]['post_date'])).getDate()%>/<%-(new Date(Number(items[i]['post_date'])).getMonth()+1<=9)?"0"+(new Date(Number(items[i]['post_date'])).getMonth()+1):new Date(Number(items[i]['post_date'])).getMonth()+1%>/<%-new Date(Number(items[i]['post_date'])).getFullYear() %></td>
+                            <td><%= items[i].name %></td>
+                            <td><%= items[i].price %></td>
+                            <td><%= items[i].description %></td>
+                            <td><button class="btn btn-danger" id="<%= items[i]._id %>"><i class="fa fa-trash"></i></button></td>
+                          </tr>
+                        <% } %>
                       </tbody>
                     </table>
                   </div>
