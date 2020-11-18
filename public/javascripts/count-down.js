@@ -1,31 +1,42 @@
 /*------------- Count dowm times set auction --------------*/
 
-// Set the date we're counting down to
-var times = document.getElementById('count-down').innerText;
-var countDownDate = new Date(new Number(times)).getTime();
+let allDays = []
+let allHours = []
+let allMinutes = []
+let allSeconds = []
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+function matchTimes() {
+  let takeTimesCount = [...$('.times-countdown')].map(div => div.innerHTML)
+  let distance = []
 
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Output the result in an element with id="demo"
-  document.getElementById("count-down").innerText = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is over, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("count-down").innerText = "EXPIRED";
+  for(i in takeTimesCount) {
+    var countDownDate = new Date(new Number(takeTimesCount[i])).getTime();
+    // Find the distance between now and the count down date
+    var count = countDownDate - new Date().getTime();
+    // Time calculations for days, hours, minutes and seconds
+    distance.push(count)
+    var days = Math.floor(distance[i] / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance[i] % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance[i] % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance[i] % (1000 * 60)) / 1000);
+    allDays.push(days)
+    allHours.push(hours)
+    allMinutes.push(minutes)
+    allSeconds.push(seconds)
+    var result = `${allDays[i]}d ${allHours[i]}h ${allMinutes[i]}m ${allSeconds[i]}s `
   }
-}, 1000);
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+    for(let j = 0; j < takeTimesCount.length; j++){
+      // If the count down is over, write some text
+      // $('.times-countdown').map((key, val) => val.text())
+      if (distance < 0) {
+        clearInterval(x);
+        $('.times-countdown').text('EXPIRED').css("color", "#fc2403")
+      }
+    }
+  }, 1000);
+}
+
+matchTimes()
