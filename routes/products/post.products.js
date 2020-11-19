@@ -12,6 +12,7 @@ router.post('/', upload.single('images_pro'), (req, res, next) => {
   var pro = req.body
   var content = {
     post_date: new Date(Date.now(pro.date_post)),
+    categories: pro.categories,
     name: pro.name_pro,
     price: pro.price_pro,
     bid_date: new Date(pro.bid_date),
