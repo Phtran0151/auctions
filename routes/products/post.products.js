@@ -29,12 +29,28 @@ router.post('/', upload.single('images_pro'), (req, res, next) => {
     db.collection('products').insertOne(content, (err, result) => {
       if(!err){
         res.redirect('/productsAll')
-      }else{
+      } else {
         res.render("Something went wrong!")
       }
     })
     db.close()
   })
+});
+
+router.delete('/productsAll/:id', function(req,res){
+  let id = req.params.id;
+  console.log(id)
+  mongo.connect(pathMongo, (err, db) => {
+    db.collection('products').remove({ _id: id }, function(err){
+      if(err) {
+        console.log('Something went wrong!')
+      } else {
+        req.flash('success', 'Product deleted Success');
+        res.location('/productsAll');
+        res.redirect('/productsAll');
+      }
+    })
+  });
 });
 
 module.exports = router;

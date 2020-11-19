@@ -120,12 +120,10 @@
                   <span> Product </span> <span class="menu-arrow"></span>
                 </a>
                 <ul class="list-unstyled">
-                  <li><a href="/admin-set/drinks"><i class="fa fa-cocktail"></i>Drinks</a></li>
-                  <li><a href="/admin-set/breads"><i class="fas fa-cookie"></i>Breads</a></li>
-                  <li><a href="/admin-set/fruits"><i class="fas fa-lemon"></i>Fruits</a></li>
-                  <li><a href="/admin-set/meat"><i class="fas fa-drumstick-bite"></i>Meat</a></li>
-                  <li><a href="/admin-set/chicken"><i class="fas fa-drumstick-bite"></i>Chicken</a></li>
-                  <li><a href="/admin-set/seafood"><i class="fas fa-fish"></i>SeaFood</a></li>
+                  <li><a href="/admin-set/drinks"><i class="fa fa-cocktail"></i>Electronics</a></li>
+                  <li><a href="/admin-set/fruits"><i class="fas fa-lemon"></i>Clothes & Shoes</a></li>
+                  <li><a href="/admin-set/meat"><i class="fas fa-drumstick-bite"></i>Beauty & Picks</a></li>
+                  <li><a href="/admin-set/chicken"><i class="fas fa-drumstick-bite"></i>Computers & SmartPhone</a></li>
                 </ul>
               </li>
               <li>
@@ -156,6 +154,7 @@
                         <tr>
                           <th>#</th>
                           <th>Date Posts</th>
+                          <th>Categories</th>
                           <th>Name Product</th>
                           <th>Price</th>
                           <th>Description</th>
@@ -167,10 +166,11 @@
                           <tr>
                             <td><%= i + 1 %></td>
                             <td><%= (new Date(Number(items[i]['post_date'])).getDate()<=9)?"0"+new Date(Number(items[i]['post_date'])).getDate():new Date(Number(items[i]['post_date'])).getDate()%>/<%-(new Date(Number(items[i]['post_date'])).getMonth()+1<=9)?"0"+(new Date(Number(items[i]['post_date'])).getMonth()+1):new Date(Number(items[i]['post_date'])).getMonth()+1%>/<%-new Date(Number(items[i]['post_date'])).getFullYear() %></td>
+                            <td><%= items[i].categories %></td>
                             <td><%= items[i].name %></td>
                             <td><%= items[i].price %></td>
                             <td><%= items[i].description %></td>
-                            <td><button class="btn btn-danger" id="<%= items[i]._id %>"><i class="fa fa-trash"></i></button></td>
+                            <td><button class="btn btn-danger removeItems" data-id=<%=items[i]._id%> ><i class="fa fa-trash"></i></button></td>
                           </tr>
                         <% } %>
                       </tbody>
@@ -240,6 +240,7 @@
     <script src="../javascripts/js-admin/jquery.app.js"></script>
     <script src="../javascripts/js-admin/controlAdmin.js"></script>
     <script src="../javascripts/js-admin/jquery.datetimepicker.full.js"></script>
+    <script src="../javascripts/js-admin/deleteProducts.js"></script>
     <script>
       var resizefunc = [];
       jQuery(document).ready(function () {
