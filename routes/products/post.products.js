@@ -37,20 +37,4 @@ router.post('/', upload.single('images_pro'), (req, res, next) => {
   })
 });
 
-router.delete('/productsAll/:id', function(req,res){
-  let id = req.params.id;
-  console.log(id)
-  mongo.connect(pathMongo, (err, db) => {
-    db.collection('products').remove({ _id: id }, function(err){
-      if(err) {
-        console.log('Something went wrong!')
-      } else {
-        req.flash('success', 'Product deleted Success');
-        res.location('/productsAll');
-        res.redirect('/productsAll');
-      }
-    })
-  });
-});
-
 module.exports = router;
