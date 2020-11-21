@@ -174,22 +174,26 @@ Created: Colorib
 		Range Slider
 	--------------------- */
 	var rangeSlider = $(".price-range"),
+    price = $('.product__price').text().split('VND'),
     minamount = $("#minamount"),
     maxamount = $("#maxamount"),
-    minPrice = rangeSlider.data('min'),
-    maxPrice = rangeSlider.data('max');
+    minPrice, maxPrice
+    price.filter(e => e !== "").map((e) => {
+      minPrice = Math.min(Number(e))
+      maxPrice = Math.max(Number(e))
+    })
     rangeSlider.slider({
     range: true,
     min: minPrice,
     max: maxPrice,
     values: [minPrice, maxPrice],
     slide: function (event, ui) {
-        minamount.val('$' + ui.values[0]);
-        maxamount.val('$' + ui.values[1]);
-        }
+        minamount.val('VND' + ui.values[0]);
+        maxamount.val('VND' + ui.values[1]);
+    }
     });
-    minamount.val('$' + rangeSlider.slider("values", 0));
-    maxamount.val('$' + rangeSlider.slider("values", 1));
+    minamount.val(rangeSlider.slider("values", 0) + 'VND');
+    maxamount.val(rangeSlider.slider("values", 1) + 'VND');
 
     /*------------------
 		Single Product
@@ -201,7 +205,7 @@ Created: Colorib
 			$('.product__big__img').attr({src: imgurl});
 		}
     });
-    
+
     /*-------------------
 		Quantity change
 	--------------------- */
