@@ -35,8 +35,8 @@ Created: Colorib
         Background Set
     --------------------*/
     $('.set-bg').each(function () {
-        var bg = $(this).data('setbg');
-        $(this).css('background-image', 'url(' + bg + ')');
+      var bg = $(this).data('setbg');
+      $(this).css('background-image', 'url(' + bg + ')');
     });
 
     //Search Switch
@@ -167,8 +167,8 @@ Created: Colorib
     /* var timerdate = "2020/12/30" */
 
 	$("#countdown-time").countdown(timerdate, function(event) {
-        $(this).html(event.strftime("<div class='countdown__item'><span>%D</span> <p>Day</p> </div>" + "<div class='countdown__item'><span>%H</span> <p>Hour</p> </div>" + "<div class='countdown__item'><span>%M</span> <p>Min</p> </div>" + "<div class='countdown__item'><span>%S</span> <p>Sec</p> </div>"));
-    });
+    $(this).html(event.strftime("<div class='countdown__item'><span>%D</span> <p>Day</p> </div>" + "<div class='countdown__item'><span>%H</span> <p>Hour</p> </div>" + "<div class='countdown__item'><span>%M</span> <p>Min</p> </div>" + "<div class='countdown__item'><span>%S</span> <p>Sec</p> </div>"));
+  });
 
     /*-------------------
 		Range Slider
@@ -188,8 +188,8 @@ Created: Colorib
     max: maxPrice,
     values: [minPrice, maxPrice],
     slide: function (event, ui) {
-        minamount.val('VND' + ui.values[0]);
-        maxamount.val('VND' + ui.values[1]);
+      minamount.val('VND' + ui.values[0]);
+      maxamount.val('VND' + ui.values[1]);
     }
     });
     minamount.val(rangeSlider.slider("values", 0) + 'VND');
@@ -227,7 +227,7 @@ Created: Colorib
 		}
 		$button.parent().find('input').val(newVal);
     });
-    
+
     /*-------------------
 		Radio Btn
 	--------------------- */

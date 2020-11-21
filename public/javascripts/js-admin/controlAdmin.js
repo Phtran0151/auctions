@@ -3,12 +3,4 @@
 // 		$("#date").val(Date.now());
 // 		$(this).attr('action', `${window.location.href}`);
 // 	});
-// 	$(".btn-danger").click(function(event) {
-// 		var id = $(this).attr('id');
-// 		$.post(`/dashboard/${window.location.href.split("dashboard/")[1]}`, {_id: id}, function(data, textStatus, xhr) {
-// 			if(typeof data==="string"){
-// 				location.reload();
-// 			}
-// 		});
-// 	});
 // });

@@ -85,7 +85,7 @@
                 <img src="../images/admin/avatar-1.png" alt="user-img" title="Mat Helme" class="img-circle img-thumbnail img-responsive">
                 <div class="user-status offline"><i class="zmdi zmdi-dot-circle"></i></div>
             </div>
-            <h5><a href="#">Mat Helme</a></h5>
+            <h5><a href="#">Ph DTran</a></h5>
             <ul class="list-inline">
               <li>
                 <a href="/logout">
@@ -166,9 +166,9 @@
                           <tr>
                             <td><%= i + 1 %></td>
                             <td><%= (new Date(Number(items[i]['post_date'])).getDate()<=9)?"0"+new Date(Number(items[i]['post_date'])).getDate():new Date(Number(items[i]['post_date'])).getDate()%>/<%-(new Date(Number(items[i]['post_date'])).getMonth()+1<=9)?"0"+(new Date(Number(items[i]['post_date'])).getMonth()+1):new Date(Number(items[i]['post_date'])).getMonth()+1%>/<%-new Date(Number(items[i]['post_date'])).getFullYear() %></td>
-                            <td><%= items[i].categories %></td>
+                            <td><%= items[i].categories.toUpperCase().replace('_',' & ') %></td>
                             <td><%= items[i].name %></td>
-                            <td><%= items[i].price %></td>
+                            <td class="product__price"><%= items[i].price %></td>
                             <td><%= items[i].description %></td>
                             <td><button class="btn btn-danger removeItems" data-id=<%=items[i]._id%> ><i class="fa fa-trash"></i></button></td>
                           </tr>
@@ -241,6 +241,7 @@
     <script src="../javascripts/js-admin/controlAdmin.js"></script>
     <script src="../javascripts/js-admin/jquery.datetimepicker.full.js"></script>
     <script src="../javascripts/js-admin/deleteProducts.js"></script>
+    <script src="../javascripts/price.js"></script>
     <script>
       var resizefunc = [];
       jQuery(document).ready(function () {

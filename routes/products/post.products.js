@@ -3,9 +3,9 @@ const router = express.Router();
 const mongo = require("mongodb");
 const pathMongo = require("../path.mongodb");
 const multer = require("multer")
-const produceImage = require('../config/produce.images');
+const produceImage = require('../config/product.images');
 const storage = multer.diskStorage(produceImage)
-const upload = multer( { storage: storage } );
+const upload = multer({ storage: storage });
 
 /* POST products page. */
 router.post('/', upload.single('images_pro'), (req, res, next) => {

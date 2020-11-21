@@ -3,6 +3,6 @@ module.exports = {
   destination: `public/uploads/`,
   filename: function ( req, file, cb ) {
     let typeFile = file.originalname.split(".")[file.originalname.split(".").length-1];
-    cb( null, `${index++}_${req.body['Ngày']}.jpg`);
+    cb( null, `${index++}_${req.body['post_date']}.jpg`);
   }
 }
