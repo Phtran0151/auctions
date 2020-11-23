@@ -7,7 +7,8 @@ const fs = require('fs')
 
 /* GET remove products. */
 router.get('/:id', (req, res, next) => {
-  console.log(req.params)
+  res.send(`/productsAll/${req.query._id}`)
+  console.log(req.query._id)
   // mongo.connect(mongoPath, (err,db) => {
   //   db.collection('products').findOne({_id: ObjectId(req.query._id)}, (err, data) => {
   //     db.collection('products').deleteOne({_id: ObjectId(req.query._id)}, (err, result) => {

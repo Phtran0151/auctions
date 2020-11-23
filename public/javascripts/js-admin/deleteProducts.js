@@ -5,15 +5,12 @@ $(document).ready(function(){
       $.ajax({
         url: `/removeProducts/${window.location.href.split("productsAll/")[1]}`,
         type: "GET",
-        dataType: "html",
-        data: {_id : id},
-        contentType: "application/xml",
-        timeout: 1000,
+        data: {_id: id},
         complete: function() {
           console.log('process complete');
         },
         success: function(data) {
-          console.log(data);
+          location.reload()
           console.log('process sucess');
         },
         error: function() {

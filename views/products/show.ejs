@@ -170,7 +170,7 @@
                             <td><%= items[i].name %></td>
                             <td class="product__price"><%= items[i].price %></td>
                             <td><%= items[i].description %></td>
-                            <td><button class="btn btn-danger removeItems" data-id=<%=items[i]._id%> ><i class="fa fa-trash"></i></button></td>
+                            <td><button class="btn btn-danger removeItems" href="/remove" data-id=<%=items[i]._id%> ><i class="fa fa-trash"></i></button></td>
                           </tr>
                         <% } %>
                       </tbody>
