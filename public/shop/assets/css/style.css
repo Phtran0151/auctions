@@ -4394,7 +4394,7 @@ input::-moz-focus-inner {
     [ ## Fields ]
 */
 input[type="text"]:focus,
-input[type="email"]:focus,
+input[type="username"]:focus,
 input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus {
@@ -8454,7 +8454,7 @@ ul.dropdown-content > .dropdown-trigger:hover > ul.dropdown-content > li:hover >
 .contact-info-item.address .shape-icon {
   color: #498c2f;
 }
-.contact-info-item.email .shape-icon {
+.contact-info-item.username .shape-icon {
   color: #a4660b;
 }
 .contact-info-item .shape-icon {
@@ -9800,7 +9800,7 @@ ul.dropdown-content > .dropdown-trigger:hover > ul.dropdown-content > li:hover >
   padding: 0.2em 1em;
 }
 .widget input[type="text"],
-.widget input[type="email"],
+.widget input[type="username"],
 .widget input[type="url"],
 .widget input[type="password"],
 .widget input[type="search"],
@@ -9808,7 +9808,7 @@ ul.dropdown-content > .dropdown-trigger:hover > ul.dropdown-content > li:hover >
   padding: 0.5em 1em;
 }
 .widget input[type="text"]:focus,
-.widget input[type="email"]:focus,
+.widget input[type="username"]:focus,
 .widget input[type="url"]:focus,
 .widget input[type="password"]:focus,
 .widget input[type="search"]:focus,
@@ -10487,7 +10487,7 @@ ul.dropdown-content > .dropdown-trigger:hover > ul.dropdown-content > li:hover >
   margin-bottom: 0px;
   position: relative;
 }
-.subscribe_widget .subscribe-form .form-group input[type="email"] {
+.subscribe_widget .subscribe-form .form-group input[type="username"] {
   background-color: transparent;
   border-top: 0px solid;
   border-left: 0px solid;
@@ -10497,11 +10497,11 @@ ul.dropdown-content > .dropdown-trigger:hover > ul.dropdown-content > li:hover >
   width: 100%;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .subscribe_widget .subscribe-form .form-group input[type="email"] {
+  .subscribe_widget .subscribe-form .form-group input[type="username"] {
     width: 70%;
   }
 }
-.subscribe_widget .subscribe-form .form-group input[type="email"]:focus {
+.subscribe_widget .subscribe-form .form-group input[type="username"]:focus {
   color: white;
   border-bottom-color: #6449e7;
 }
