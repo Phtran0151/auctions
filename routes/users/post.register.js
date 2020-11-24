@@ -9,6 +9,8 @@ router.post('/', (req, res, next) => {
     return re.test(String(email).toLowerCase());
   }
   let user = {
+    fullname: req.body.fullname,
+    phone: req.body.phone,
     username: req.body.username,
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password[0], 10),
