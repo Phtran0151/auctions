@@ -23,7 +23,7 @@ module.exports = `<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/b
                           <p class="text-center">Thank you for trusting us</p>
                         </div>
                         <div class="modal-footer">
-                          <a href="/users/login" class="btn btn-success btn-block" id="countTime" data-dismiss="modal">Return to the home page (after 10 seconds)</a>
+                          <a href="/users/register" class="btn btn-success btn-block" id="countTime" data-dismiss="modal">Return to the home page (after 10 seconds)</a>
                         </div>
                       </div>
                     </div>
