@@ -1,377 +1,373 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zxx">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Ashion Template">
-  <meta name="keywords" content="Ashion, unica, creative, html">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Welcome to the auctions shop!</title>
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- Google Font -->
-  <link rel="shortcut icon" href="../images/favicon/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
-  rel="stylesheet">
+  <!-- Specific Meta
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Bid And Auction HTML Template">
+  <meta name="keywords" content="HTML5, Template, Design, Business, bid, auction, bid product, auction product, auction template, auction website" />
+  <meta name="author" content="rifat636">
 
-  <!-- Css Styles -->
-  <link rel="stylesheet" href="../stylesheets/bootstrap.min.css" type="text/css">
-  <link rel="stylesheet" href="../stylesheets/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="../stylesheets/elegant-icons.css" type="text/css">
-  <link rel="stylesheet" href="../stylesheets/jquery-ui.min.css" type="text/css">
-  <link rel="stylesheet" href="../stylesheets/magnific-popup.css" type="text/css">
-  <link rel="stylesheet" href="../stylesheets/owl.carousel.min.css" type="text/css">
-  <link rel="stylesheet" href="../stylesheets/slicknav.min.css" type="text/css">
-  <link rel="stylesheet" href="../stylesheets/style.css" type="text/css">
+  <!-- Titles
+  ================================================== -->
+  <title>Biddo - Bid And Auction HTML Template</title>
+
+  <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="shop/assets/images/logo/favicon.ico">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/android-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-144x144.png">
+
+  <!-- Custom Font
+  ================================================== -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900&display=swap" rel="stylesheet">  
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="../shop/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../shop/assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../shop/assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="../shop/assets/css/simple-scrollbar.css">
+  <link rel="stylesheet" href="../shop/assets/css/odometer-theme-default.css">
+  <link rel="stylesheet" href="../shop/assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="../shop/assets/css/icomoon.css">
+  <link rel="stylesheet" href="../shop/assets/css/style.css">
+
+  <script src="../shop/assets/js/modernizr.min.js"></script>
 </head>
 
 <body>
-  <!-- Page Preloder -->
-  <div id="preloder">
-      <div class="loader"></div>
-  </div>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Preloader
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div><!-- /preloader-icon -->
+        </div><!-- /preloader-inner -->
+    </div><!-- /preloader -->
 
-  <!-- Offcanvas Menu Begin -->
-  <div class="offcanvas-menu-overlay"></div>
-  <div class="offcanvas-menu-wrapper">
-    <div class="offcanvas__close">+</div>
-    <ul class="offcanvas__widget">
-      <li><span class="icon_search search-switch"></span></li>
-      <li>
-        <a href="#"><span class="icon_heart_alt"></span>
-          <div class="tip">2</div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <span class="icon_bag_alt"></span>
-          <div class="tip">2</div>
-        </a>
-      </li>
-    </ul>
-    <div class="offcanvas__logo">
-      <a href="/"><img src="../images/logo/logo.png" alt=""></a>
-    </div>
-    <div id="mobile-menu-wrap"></div>
-    <div class="offcanvas__auth">
-      <a href="/users/login">Login</a>
-      <a href="/users/register">Register</a>
-    </div>
-  </div>
-  <!-- Offcanvas Menu End -->
-
-  <!-- Header Section Begin -->
-  <header class="header">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xl-3 col-lg-2">
-          <div class="header__logo">
-            <a href="/"><img src="../images/logo/logo.png" alt=""></a>
-          </div>
-        </div>
-        <div class="col-xl-6 col-lg-7">
-            <nav class="header__menu">
-              <ul>
-                <li class="active"><a href="/">Home</a></li>
-                <li><a href="#">Pages</a>
-                  <ul class="dropdown">
-                    <li><a href="/product_details">Product Details</a></li>
-                    <li><a href="/shop_cart">Shop Cart</a></li>
-                    <li><a href="/checkout">Checkout</a></li>
-                  </ul>
-                </li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact">Contact</a></li>
-              </ul>
-            </nav>
-        </div>
-        <div class="col-lg-3">
-          <div class="header__right">
-            <div class="header__right__auth">
-              <a href="/users/login">Login</a>
-              <a href="/users/register">Register</a>
-            </div>
-            <ul class="header__right__widget">
-              <li><span class="icon_search search-switch"></span></li>
-              <li><a href="#"><span class="icon_heart_alt"></span>
-                  <div class="tip">2</div>
-              </a></li>
-              <li><a href="#"><span class="icon_bag_alt"></span>
-                  <div class="tip">2</div>
-              </a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="canvas__open">
-        <i class="fa fa-bars"></i>
-      </div>
-    </div>
-  </header>
-  <!-- Header Section End -->
-
-  <!-- Breadcrumb Begin -->
-  <div class="breadcrumb-option">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="breadcrumb__links">
-            <a href="/"><i class="fa fa-home"></i> Home</a>
-            <span>Shop</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Breadcrumb End -->
-
-  <!-- Shop Section Begin -->
-  <section class="shop spad">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-3 col-md-3">
-                  <div class="shop__sidebar">
-                    <div class="sidebar__categories">
-                      <div class="section-title">
-                          <h4>Categories</h4>
+   <!--********************************************************-->
+    <!--********************* SITE CONTENT *********************-->
+    <!--********************************************************-->
+    <div class="site-content">
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Site Header
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <header class="site-header">
+            <div class="header-top-navbar">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-7">
+                        <div class="top-navbar-left">
+                          <ul class="info">
+                            <li class="info-date"><span class="fa fa-envelope"></span> Email: <a href="/">support@biddo.com</a></li>
+                            <li class="temperature"><span class="fa fa-phone"></span>Call Us: 012 - 345 - 6789 </li>
+                          </ul>
+                        </div><!--~./ top-navbar-left ~-->
                       </div>
-                      <div class="categories__accordion">
-                        <div class="accordion" id="accordionExample">
-                          <div class="card">
-                            <div class="card-heading">
-                              <a data-toggle="collapse" data-target="#collapseOne">Electronics</a>
-                            </div>
+                      <div class="col-lg-5">
+                        <div class="top-navbar-right">
+                          <div class="header-social-area">
+                            <ul class="header-social-share">
+                              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                              <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul><!--~./ social-share ~-->
                           </div>
-                          <div class="card">
-                            <div class="card-heading">
-                              <a data-toggle="collapse" data-target="#collapseOne">Clothes & Shoes</a>
-                            </div>
+                          <div class="user-registration-area">
+                              <a class="user-reg-btn" href="/users/register">
+                                <span class="icon-user-1"></span>
+                                  Register
+                              </a>
+                              <a class="user-reg-btn" href="/users/login">
+                                <span class="icon-user-1"></span>
+                                  Login
+                              </a>
                           </div>
-                          <div class="card">
-                            <div class="card-heading">
-                              <a data-toggle="collapse" data-target="#collapseThree">Beauty Picks</a>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-heading">
-                              <a data-toggle="collapse" data-target="#collapseFour">Computers & SmartPhone</a>
-                            </div>
-                          </div>
-                        </div>
+                        </div><!--~./ top-navbar-right ~-->
                       </div>
-                    </div>
-                    <div class="sidebar__filter">
-                      <div class="section-title">
-                        <h4>Shop by price</h4>
-                      </div>
-                      <div class="filter-range-wrap">
-                        <div class="price-range ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"></div>
-                        <div class="range-slider">
-                          <div class="price-input">
-                            <input type="text" id="minamount" disabled>
-                            <input type="text" id="maxamount" disabled>
-                          </div>
-                        </div>
-                      </div>
-                      <a href="javascript:void(0)" class="filter-price">Filter</a>
-                    </div>
                   </div>
               </div>
-              <div class="col-lg-9 col-md-9">
+            </div><!-- /.header-top-navbar -->
+
+            <div class="site-navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="navbar navbar-expand-lg navigation-area">
+                                <!-- Site Branding -->
+                                <div class="site-branding">
+                                    <a class="site-logo" href="/">
+                                        <img src="shop/assets/images/logo/logo.png" alt="Site Logo" />
+                                    </a>
+                                </div><!-- /.site-branding -->
+                                <div class="mainmenu-area">
+                                    <nav class="menu">
+                                      <ul id="nav">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                      </ul> <!-- /.menu-list -->
+                                    </nav><!--/.menu-->
+                                    <div class="header-navigation-right">
+                                        <div class="search-wrap">
+                                            <div class="search-btn">
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                            <div class="search-form">
+                                                <form action="#">
+                                                    <input type="search" placeholder="Search">
+                                                    <button type="submit"><i class="fas fa-search"></i> </button>
+                                                </form>
+                                            </div>
+                                        </div><!--~./ search-wrap ~-->
+                                    </div>
+                                </div><!--~./ mainmenu-wrap ~-->
+                            </div><!--~./ navigation-area ~-->
+                        </div><!--  /.col-12 -->
+                    </div><!--  /.row -->
+                </div>
+            </div><!-- /.site-navigation -->
+
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!--~~~~~~~ Start Mobile Menu ~~~~~~~~-->
+                            <div class="mobile-menu">
+                                <a class="mobile-logo" href="/">
+                                    <img src="shop/assets/images/logo/logo.png" alt="logo">
+                                </a>
+                            </div><!--~~./ end mobile menu ~~-->
+                        </div><!--  /.col-12 -->
+                    </div><!--  /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.mobile-menu-area -->
+        </header><!--~~./ end site header ~~-->
+        <!--~~~ Sticky Header ~~~-->
+        <div id="sticky-header"></div><!--~./ end sticky header ~-->
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Page Title Area
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="page-title-area bg-white-smoke">
+            <div class="container">
                 <div class="row">
-                  <% for(let i = 0; i < items.length; i++) { %>
-                    <div class="col-lg-4 col-md-6">
-                      <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg=<%= items[i].image %> >
-                          <div class="times-countdown" data-countdown= <%= items[i].bid_date %>></div>
-                          <ul class="product__hover">
-                            <li><a href="../images/shop/shop-1.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-                            <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                            <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                          </ul>
-                        </div>
-                        <div class="product__item__text">
-                          <h6><a href="#"><%= items[i].name %></a></h6>
-                          <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
+                    <div class="col-12">
+                        <div class="page-header-content text-center">
+                            <div class="page-header-caption">
+                                <h2 class="page-title">deals of the day</h2>
+                            </div><!--~~./ page-header-caption ~~-->
+                            <div class="breadcrumb-area">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/">Home</a></li>  
+                                    <li class="breadcrumb-item active">deals</li>
+                                </ol>
+                            </div><!--~~./ breadcrumb-area ~~-->
+                        </div><!--~~./ page-header-content ~~-->
+                    </div>
+                </div>
+            </div><!--~~./ end container ~~-->
+        </div><!--~~./ end page title area ~~--> 
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Deals Page Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="deals-page-block ptb-120">
+            <div class="container">
+              <div class="row items-two-1199">
+                <% for(let i = 0; i < items.length; i++) {%>
+                  <div class="col-lg-4 col-md-6">
+                    <div class="auction-item">
+                      <div class="item-header">
+                          <h3 class="heading"><a href="auction-details.html"><%- items[i].name %></a></h3>
+                          <div class="auction-id">Auction ID: BB281<%- i %></div>
+                      </div><!-- /.item-footer -->
+                      <div class="item-img">
+                        <a href="javascript:void(0)">
+                          <img src=<%- items[i].image %> alt="Thumbnail">
+                          <img class="prod2" src=<%- items[i].image %> alt="Thumbnail">
+                        </a>
+                        <div class="bid-max"><span class="icon-user-1"></span></div>
+                        <div class="item-price">Price: $<%- items[i].price %></div>
+                      </div><!-- /.item-img -->
+                      <div class="item-footer">
+                        <div class="item-footer-top">
+                          <div class="bid-price">$<%- items[i].price %></div>
+                          <div class="bid-timer-area">
+                            <div id="bid_counter" class="bid-timer" data-countdown=<%- items[i].bid_date %>></div>
+                            <p class="mess">Waiting For Bid</p>
                           </div>
-                          <div class="product__price" id="price_decimal"><%= items[i].price %> VND</div>
                         </div>
-                      </div>
-                    </div>
-                  <% } %>
-                  <div class="col-lg-12 text-center">
-                    <div class="pagination__option">
-                      <a href="#">1</a>
-                      <a href="#">2</a>
-                      <a href="#">3</a>
-                      <a href="#"><i class="fa fa-angle-right"></i></a>
-                    </div>
+                        <div class="bid-button">
+                          <a class="btn btn-default" href="#">Bid Now</a>
+                        </div>
+                      </div><!-- /.item-footer -->
+                    </div><!-- /.auction-item -->
+                  </div><!-- /.col-lg-4 -->
+                <% } %>
+              </div><!-- /.row -->
+                <div class="row">
+                  <div class="col-12">
+                      <!--~~~~~ Start Paging Navigation ~~~~~-->
+                      <nav class="paging-navigation paging-center pd-t-60">
+                        <ul class="nav-links">
+                          <li class="active"><a href="#">01</a></li>
+                          <li><a href="#" class="page-numbers">02</a></li>
+                          <li><a href="#" class="page-numbers">03</a></li>
+                          <li class="nav-next"><a href="#"><span class="icon-next1"></span></a></li>
+                        </ul>
+                      </nav><!--~./ end paging navigation ~-->
                   </div>
                 </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  <!-- Shop Section End -->
+            </div>
+        </div><!--~./ end deals page block ~-->
 
-  <!-- Instagram Begin -->
-  <div class="instagram">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-          <div class="instagram__item set-bg" data-setbg="../images/instagram/insta-1.jpg">
-            <div class="instagram__text">
-              <i class="fa fa-instagram"></i>
-              <a href="#">@ ashion_shop</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-          <div class="instagram__item set-bg" data-setbg="../images/instagram/insta-2.jpg">
-            <div class="instagram__text">
-              <i class="fa fa-instagram"></i>
-              <a href="#">@ ashion_shop</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-          <div class="instagram__item set-bg" data-setbg="../images/instagram/insta-3.jpg">
-            <div class="instagram__text">
-              <i class="fa fa-instagram"></i>
-              <a href="#">@ ashion_shop</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-          <div class="instagram__item set-bg" data-setbg="../images/instagram/insta-4.jpg">
-            <div class="instagram__text">
-              <i class="fa fa-instagram"></i>
-              <a href="#">@ ashion_shop</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-          <div class="instagram__item set-bg" data-setbg="../images/instagram/insta-5.jpg">
-            <div class="instagram__text">
-              <i class="fa fa-instagram"></i>
-              <a href="#">@ ashion_shop</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-4 col-sm-4 p-0">
-          <div class="instagram__item set-bg" data-setbg="../images/instagram/insta-6.jpg">
-            <div class="instagram__text">
-              <i class="fa fa-instagram"></i>
-              <a href="#">@ ashion_shop</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Instagram End -->
+       <!--~~~~~~~~~~~~~~~~~Start Site Footer~~~~~~~~~~~~~~~~~~~~-->
+        <footer class="site-footer pd-t-120">
+            <!--~~~~~~~~~~~~Start Footer Widget Area~~~~~~~~~~~~~~~~~~~~~~~-->
+            <div class="footer-widget-area">
+                <div class="container">
+                    <div class="row">
+                        <!--~~~~~ Start Widget About us ~~~~~-->
+                        <div class="col-lg-4">
+                            <aside class="widget widget_about">
+                                <h2 class="widget-title">About Us</h2>
+                                <div class="widget-content">
+                                    <p>Dempor pede libero dapi useu class venenatis ut bibendum quam ut nibh necnullam. Nonhon Pede mollis vel vitae dolorurpis</p>
+                                    <div class="contact-info">
+                                        <div class="icon">
+                                            <span class="icon-paperplane"></span>
+                                        </div>
+                                        <div class="info">
+                                          <p>128 Nguyen Van Linh St, Hai Chau 55000, Vietnam</p>
+                                        </div>
+                                    </div><!-- /.contact-info -->
+                                    <div class="contact-info">
+                                        <div class="icon">
+                                            <span class="icon-phone2"></span>
+                                        </div>
+                                        <div class="info">
+                                            <p>(+084) 012 345 678</p>
+                                        </div>
+                                    </div><!-- /.contact-info -->
+                                    <div class="contact-info">
+                                        <div class="icon">
+                                            <span class="icon-mail5"></span>
+                                        </div>
+                                        <div class="info">
+                                            <p><a href="mailto:ttranphuong@gmail.com">ttranphuong@gmail.com</a></p>
+                                        </div>
+                                    </div><!-- /.contact-info -->
+                                </div>
+                            </aside>
+                        </div><!--~./ end about us widget ~-->
 
-  <!-- Footer Section Begin -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-7">
-          <div class="footer__about">
-            <div class="footer__logo">
-              <a href="/"><img src="../images/logo/logo.png" alt=""></a>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            cilisis.</p>
-            <div class="footer__payment">
-              <a href="#"><img src="../images/payment/payment-1.png" alt=""></a>
-              <a href="#"><img src="../images/payment/payment-2.png" alt=""></a>
-              <a href="#"><img src="../images/payment/payment-3.png" alt=""></a>
-              <a href="#"><img src="../images/payment/payment-4.png" alt=""></a>
-              <a href="#"><img src="../images/payment/payment-5.png" alt=""></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-sm-5">
-          <div class="footer__widget">
-            <h6>Quick links</h6>
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Blogs</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-sm-4">
-          <div class="footer__widget">
-            <h6>Account</h6>
-            <ul>
-              <li><a href="#">My Account</a></li>
-              <li><a href="#">Orders Tracking</a></li>
-              <li><a href="#">Checkout</a></li>
-              <li><a href="/admin/login">Adminstration</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-8 col-sm-8">
-          <div class="footer__newslatter">
-            <h6>NEWSLETTER</h6>
-            <form action="#">
-              <input type="text" placeholder="Email">
-              <button type="submit" class="site-btn">Subscribe</button>
-            </form>
-            <div class="footer__social">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-youtube-play"></i></a>
-              <a href="#"><i class="fa fa-instagram"></i></a>
-              <a href="#"><i class="fa fa-pinterest"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <div class="footer__copyright__text">
-              <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="/" target="_blank">PhuongTr</a></p>
-            </div>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Footer Section End -->
+                        <!--~~~~~ Start Widget Links ~~~~~-->
+                        <div class="col-lg-2">
+                          <aside class="widget widget_links">
+                              <h2 class="widget-title">Quick Link</h2>
+                              <div class="widget-content">
+                                <ul>
+                                  <li><a href="#">My Account</a></li>
+                                  <li><a href="#">Affiliate Program</a></li>
+                                  <li><a href="#">Lawyer Consulting</a></li>
+                                  <li><a href="#">Sorteo Licenses</a></li>
+                                  <li><a href="#">Quick Start Guide</a></li>
+                                  <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                              </div>
+                          </aside>
+                        </div><!--~./ end links widget ~-->
 
-  <!-- Search Begin -->
-  <div class="search-model">
-    <div class="h-100 d-flex align-items-center justify-content-center">
-        <div class="search-close-switch">+</div>
-        <form class="search-model-form">
-            <input type="text" id="search-input" placeholder="Search here.....">
-        </form>
-    </div>
-  </div>
-  <!-- Search End -->
+                        <!--~~~~~ Start Widget Links ~~~~~-->
+                        <div class="col-lg-2">
+                            <aside class="widget widget_links">
+                                <h2 class="widget-title">Help Center</h2>
+                                <div class="widget-content">
+                                    <ul>
+                                      <li><a href="#">Help centre</a></li>
+                                      <li><a href="#">FAQ</a></li>
+                                      <li><a href="#">Tutorials</a></li>
+                                      <li><a href="#">Terms of Service</a></li>
+                                      <li><a href="#">Borrow</a></li>
+                                      <li><a href="#">Complaints Policy</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div><!--~./ end links widget ~-->
 
-  <!-- Js Plugins -->
-  <script src="../javascripts/jquery-3.3.1.min.js"></script>
-  <script src="../javascripts/bootstrap.min.js"></script>
-  <script src="../javascripts/jquery.magnific-popup.min.js"></script>
-  <script src="../javascripts/jquery-ui.min.js"></script>
-  <script src="../javascripts/mixitup.min.js"></script>
-  <script src="../javascripts/jquery.countdown.min.js"></script>
-  <script src="../javascripts/jquery.slicknav.js"></script>
-  <script src="../javascripts/owl.carousel.min.js"></script>
-  <script src="../javascripts/jquery.nicescroll.min.js"></script>
-  <script src="../javascripts/main.js"></script>
-  <script src="../javascripts/price.js"></script>
-  <script src="../javascripts/count-down.js"></script>
+                        <!--~~~~~ Start Widget Links ~~~~~--> 
+                        <div class="col-lg-4">
+                            <aside class="widget widget_payment">
+                                <h2 class="widget-title">Payment Option</h2>
+                                <div class="widget-content">
+                                    <p>Dempor pede libero dapi useu class venenatis ut bibendum quam ut nibh necnullam. Nonhon Pede mollis vel vitae dolorurpis</p>
+                                    <div class="payment-barcode-area">
+                                        <div class="payment-accepted">
+                                            <img src="shop/assets/images/payment/wallet-logo.png" alt="Wallet">
+                                            <p class="title">Accepted Here</p>
+                                        </div>
+                                        <div class="barcode-thumb">
+                                            <img src="shop/assets/images/payment/barcode.png" alt="Bar Code">
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div><!--~./ end payment widget ~-->
+                    </div>
+                </div>
+            </div><!--~./ end footer widgets area ~-->
+
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Start Footer Bottom Area
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright-text text-center">
+                                <p>Copyright  © 2020 . All rights reserved</p>
+                            </div><!--~./ end copyright text ~-->
+                        </div><!--~./ col-12 ~-->
+                    </div>
+                </div>
+            </div><!--~./ end footer bottom area ~-->
+        </footer><!--~./ end site footer ~-->
+    </div><!--~~./ end site content ~~-->
+
+    <!-- All The JS Files
+    ================================================== -->
+    <script src="../shop/assets/js/jquery.js"></script>
+    <script src="../shop/assets/js/popper.min.js"></script>
+    <script src="../shop/assets/js/bootstrap.min.js"></script>
+    <script src="../shop/assets/js/plugins.js"></script>
+    <script src="../shop/assets/js/meanmenu.min.js"></script>
+    <script src="../shop/assets/js/particles.min.js"></script>
+    <script src="../shop/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="../shop/assets/js/jquery.countdown.min.js"></script><!-- main-js -->
+    <script src="../shop/assets/js/jquery.nice-select.min.js"></script>
+    <script src="../shop/assets/js/theia-sticky-sidebar.min.js"></script>
+    <script src="../shop/assets/js/ResizeSensor.min.js"></script>
+    <script src="../shop/assets/js/simple-scrollbar.min.js"></script>
+    <script src="../shop/assets/js/scrolla.jquery.min.js"></script>
+    <script src="../shop/assets/js/odometer.min.js"></script>
+    <script src="../shop/assets/js/isInViewport.jquery.js"></script>
+    <script src="../shop/assets/js/yscountdown.min.js"></script>
+    <script src="../shop/assets/js/owl.carousel.min.js"></script>
+    <script src="../shop/assets/js/main.js"></script><!-- main-js -->
+    <script src="../shop/assets/js/count-down.js"></script><!-- main-js -->
+    <script src="../shop/assets/js/price.js"></script><!-- main-js -->
 </body>
 </html>

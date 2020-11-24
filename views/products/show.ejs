@@ -168,7 +168,7 @@
                             <td><%= (new Date(Number(items[i]['post_date'])).getDate()<=9)?"0"+new Date(Number(items[i]['post_date'])).getDate():new Date(Number(items[i]['post_date'])).getDate()%>/<%-(new Date(Number(items[i]['post_date'])).getMonth()+1<=9)?"0"+(new Date(Number(items[i]['post_date'])).getMonth()+1):new Date(Number(items[i]['post_date'])).getMonth()+1%>/<%-new Date(Number(items[i]['post_date'])).getFullYear() %></td>
                             <td><%= items[i].categories.toUpperCase().replace('_',' & ') %></td>
                             <td><%= items[i].name %></td>
-                            <td class="product__price"><%= items[i].price %></td>
+                            <td class="bid-price">$<%= items[i].price %></td>
                             <td><%= items[i].description %></td>
                             <td><button class="btn btn-danger removeItems" href="/remove" data-id=<%=items[i]._id%> ><i class="fa fa-trash"></i></button></td>
                           </tr>
@@ -240,7 +240,7 @@
     <script src="../javascripts/js-admin/jquery.app.js"></script>
     <script src="../javascripts/js-admin/jquery.datetimepicker.full.js"></script>
     <script src="../javascripts/js-admin/deleteProducts.js"></script>
-    <script src="../javascripts/price.js"></script>
+    <script src="../shop/assets/js/price.js"></script>
     <script>
       var resizefunc = [];
       jQuery(document).ready(function () {
