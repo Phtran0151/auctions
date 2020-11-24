@@ -1,59 +1,409 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zxx">
+
 <head>
-  <title>Creative Colorlib SignUp Form</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Specific Meta
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Bid And Auction HTML Template">
+    <meta name="keywords" content="HTML5, Template, Design, Business, bid, auction, bid product, auction product, auction template, auction website" />
+    <meta name="author" content="rifat636">
 
-  <link href="../stylesheets/users/register.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <!-- Titles
+    ================================================== -->
+    <title>Biddo - Bid And Auction HTML Template</title>
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="../shop/assets/images/logo/favicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/android-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-144x144.png">
+
+    <!-- Custom Font
+    ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,700i,900&display=swap" rel="stylesheet">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../shop/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../shop/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../shop/assets/css/meanmenu.min.css">
+    <link rel="stylesheet" href="../shop/assets/css/simple-scrollbar.css">
+    <link rel="stylesheet" href="../shop/assets/css/odometer-theme-default.css">
+    <link rel="stylesheet" href="../shop/assets/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="../shop/assets/css/icomoon.css">
+    <link rel="stylesheet" href="../shop/assets/css/style.css">
+
+    <script src="../shop/assets/js/modernizr.min.js"></script>
 </head>
+
 <body>
-  <!-- main -->
-  <div class="main-w3layouts wrapper">
-    <h1>Create A Account SignUp Form</h1>
-    <div class="main-agileinfo">
-      <div class="agileits-top">
-        <form action="/signup" method="POST">
-          <input class="text" type="text" name="username" placeholder="Username" required="">
-          <input class="text email" type="email" name="email" placeholder="Email" required="">
-          <input class="text" id="password" type="password" name="password" placeholder="Password" required="">
-          <input class="text w3lpass" id="confirm_password" type="password" name="password" placeholder="Confirm Password" required="">
-          <div class="wthree-text">
-            <label class="anim">
-              <input type="checkbox" class="checkbox" required="">
-              <span>I Agree To The Terms & Conditions</span>
-            </label>
-            <div class="clear"> </div>
-          </div>
-          <input type="submit" value="SIGNUP">
-        </form>
-        <p>Don't have an Account? <a href="/users/login"> Login Now!</a></p>
-      </div>
-    </div>
-    <!-- copyright -->
-    <div class="colorlibcopy-agile">
-      <p>© <%- new Date().getFullYear() %> Colorlib Signup Form. All rights reserved | Design by <a href="/" target="_blank">Phuong Tran</a></p>
-    </div>
-  </div>
-  <!-- //main -->
+    
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Preloader
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--> 
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div><!-- /preloader-icon -->
+        </div><!-- /preloader-inner -->
+    </div><!-- /preloader -->
 
-  <script type="text/javascript">
-    var password = document.getElementById("password")
-    , confirm_password = document.getElementById("confirm_password");
+   <!--********************************************************-->
+    <!--********************* SITE CONTENT *********************-->
+    <!--********************************************************-->
+    <div class="site-content">
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Site Header
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <header class="site-header">
+            <div class="header-top-navbar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="top-navbar-left">
+                                <ul class="info">
+                                    <li class="info-date"><span class="fa fa-envelope"></span> Email: <a href="#">support@biddo.com</a></li>
+                                    <li class="temperature"><span class="fa fa-phone"></span>Call Us: 012 - 345 - 6789 </li>
+                                </ul>
+                            </div><!--~./ top-navbar-left ~-->
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="top-navbar-right">
+                                <div class="header-social-area">
+                                    <ul class="header-social-share">
+                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    </ul><!--~./ social-share ~-->
+                                </div>
+                                <div class="user-registration-area">
+                                    <a class="user-reg-btn" href="/users/login">
+                                        <span class="icon-user-1"></span>
+                                        Login
+                                    </a>
+                                </div>
+                            </div><!--~./ top-navbar-right ~-->
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.header-top-navbar -->
 
-    function validatePassword(){
-      if(password.value != confirm_password.value) {
-        confirm_password.setCustomValidity("Passwords Don't Match");
-      } else {
-        confirm_password.setCustomValidity('');
-      }
-    }
+            <div class="site-navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="navbar navbar-expand-lg navigation-area">
+                                <!-- Site Branding -->
+                                <div class="site-branding">
+                                    <a class="site-logo" href="index.html">
+                                        <img src="../shop/assets/images/logo/logo.png" alt="Site Logo" />
+                                    </a>
+                                </div><!-- /.site-branding -->
+                                <div class="mainmenu-area">
+                                    <nav class="menu">
+                                      <ul id="nav">
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/about">About</a></li>
+                                        <li><a href="/blog">Blog</a></li>
+                                        <li><a href="/contact">Contact</a></li>
+                                      </ul> <!-- /.menu-list -->
+                                    </nav><!--/.menu-->
+                                    <div class="header-navigation-right">
+                                        <div class="search-wrap">
+                                            <div class="search-btn">
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                            <div class="search-form">
+                                                <form action="#">
+                                                    <input type="search" placeholder="Search">
+                                                    <button type="submit"><i class="fas fa-search"></i> </button>
+                                                </form>
+                                            </div>
+                                        </div><!--~./ search-wrap ~-->
+                                    </div>
+                                </div><!--~./ mainmenu-wrap ~-->
+                            </div><!--~./ navigation-area ~-->
+                        </div><!--  /.col-12 -->
+                    </div><!--  /.row -->
+                </div>
+            </div><!-- /.site-navigation -->
 
-    password.onchange = validatePassword;
-    confirm_password.onkeyup = validatePassword;
-  </script>
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <!--~~~~~~~ Start Mobile Menu ~~~~~~~~-->
+                            <div class="mobile-menu">
+                                <a class="mobile-logo" href="index.html">
+                                  <img src="../shop/assets/images/logo/logo.png" alt="logo">
+                                </a>
+                            </div><!--~~./ end mobile menu ~~-->
+                        </div><!--  /.col-12 -->
+                    </div><!--  /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.mobile-menu-area -->
+        </header><!--~~./ end site header ~~-->
+        <!--~~~ Sticky Header ~~~-->
+        <div id="sticky-header"></div><!--~./ end sticky header ~-->
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Page Title Area
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="page-title-area bg-white-smoke">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="page-header-content text-center">
+                            <div class="page-header-caption">
+                                <h2 class="page-title">My Account</h2>
+                            </div><!--~~./ page-header-caption ~~-->
+                            <div class="breadcrumb-area">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active">Sign Up</li>
+                                </ol>
+                            </div><!--~~./ breadcrumb-area ~~-->
+                        </div><!--~~./ page-header-content ~~-->
+                    </div>
+                </div>
+            </div><!--~~./ end container ~~-->
+        </div><!--~~./ end page title area ~~-->
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            User Signin Block
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <div class="user-signup-block ptb-120">
+            <div class="bg-left bg-image" ></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="sing-in-mockup md-mrb-60">
+                          <img src="../shop/assets/images/others/signin-mockup.png" alt="Mockup">
+                        </div>
+                    </div><!--/.col-lg-2-->
+                    <div class="col-lg-6">
+                        <div class="user-register-area">
+                            <div class="form-content">
+                                <div class="form-header">
+                                  <h4 class="form-subheading">Sign Up here</h4>
+                                  <h2 class="heading">Welcome To Biddo</h2>
+                                </div>
+                                <form class="default-form signup-form" action="/signup" method="POST">
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                        <div class="form-group">
+                                          <label for="f_name">Full Name</label>
+                                          <input id="f_name" name="fullname" class="form-controller" type="text">
+                                        </div><!--/.form-group-->
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="form-group">
+                                          <label for="l_name">Username</label>
+                                          <input id="l_name" name="username" class="form-controller" type="text">
+                                        </div><!--/.form-group-->
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="form-group">
+                                          <label for="phone">Phone</label>
+                                          <input id="phone" name="phone" class="form-controller" type="text">
+                                        </div><!--/.form-group-->
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="form-group">
+                                          <label for="email">Email Address</label>
+                                          <input id="email" name="email" class="form-controller" type="email">
+                                        </div><!--/.form-group-->
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="form-group">
+                                          <label for="pass">Password</label>
+                                          <input id="pass" name="password" class="form-controller" type="password">
+                                        </div><!--/.form-group-->
+                                      </div>
+                                      <div class="col-lg-6">
+                                        <div class="form-group">
+                                          <label for="con_pass"> Confirm Password</label>
+                                          <input id="con_pass" name="password" class="form-controller" type="password">
+                                        </div><!--/.form-group-->
+                                      </div>
+                                    </div>
+
+                                    <div class="login-form-remember">
+                                        <label><input id="termssignin" value="" type="checkbox"><span>I agree to the <a href="#">Terms, Privacy policy and fees</a></span></label>
+                                    </div>
+                                    <div class="login-form-remember">
+                                        <label><input id="remembermesignin" value="" type="checkbox"><span>Yes, I want to receive Email </span></label>
+                                    </div>
+
+                                    <div class="form-btn-group">
+                                        <div class="form-login-area">
+                                            <button type="submit" class="btn btn-default btn-primary">
+                                                Sign Up
+                                            </button>
+                                        </div>
+                                        <div class="login-form-register-now">
+                                            You have no account ? <a class="btn-register-now" href="signin.html">Sign In</a>
+                                        </div>
+                                    </div>
+                                    <div class="reg-others-media">
+                                        <div class="text">Or, User social media to sign in</div>
+                                        <div class="social-media-icons">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </form>  
+                            </div>
+                        </div><!--~./ end user register area ~--> 
+                    </div><!-- /.col-lg-10 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!--~~./ end user signup block ~~-->
+    
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Start Site Footer
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <footer class="site-footer pd-t-120">
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Start Footer Widget Area
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <div class="footer-widget-area">
+                <div class="container">
+                    <div class="row">
+                        <!--~~~~~ Start Widget About us ~~~~~-->
+                        <div class="col-lg-4">
+                            <aside class="widget widget_about">
+                                <h2 class="widget-title">About Us</h2>
+                                <div class="widget-content">
+                                    <p>Dempor pede libero dapi useu class venenatis ut bibendum quam ut nibh necnullam. Nonhon Pede mollis vel vitae dolorurpis</p>
+                                    <div class="contact-info">
+                                        <div class="icon">
+                                            <span class="icon-paperplane"></span>
+                                        </div>
+                                        <div class="info">
+                                          <p>128 Nguyen Van Linh St, Hai Chau 55000, Vietnam</p>
+                                        </div>
+                                    </div><!-- /.contact-info -->
+                                    <div class="contact-info">
+                                        <div class="icon">
+                                            <span class="icon-phone2"></span>
+                                        </div>
+                                        <div class="info">
+                                            <p>(+084) 012 345 678</p>
+                                        </div>
+                                    </div><!-- /.contact-info -->
+                                    <div class="contact-info">
+                                        <div class="icon">
+                                            <span class="icon-mail5"></span>
+                                        </div>
+                                        <div class="info">
+                                            <p><a href="mailto:ttranphuong@gmail.com">ttranphuong@gmail.com</a></p>
+                                        </div>
+                                    </div><!-- /.contact-info -->
+                                </div>
+                            </aside>
+                        </div><!--~./ end about us widget ~-->
+
+                        <!--~~~~~ Start Widget Links ~~~~~-->
+                        <div class="col-lg-2">
+                            <aside class="widget widget_links">
+                                <h2 class="widget-title">Quick Link</h2>
+                                <div class="widget-content">
+                                    <ul>
+                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="#">Affiliate Program</a></li>
+                                        <li><a href="#">Lawyer Consulting</a></li>
+                                        <li><a href="#">Sorteo Licenses</a></li>
+                                        <li><a href="#">Quick Start Guide</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div><!--~./ end links widget ~-->
+
+                        <!--~~~~~ Start Widget Links ~~~~~--> 
+                        <div class="col-lg-2">
+                            <aside class="widget widget_links">
+                                <h2 class="widget-title">Help Center</h2>
+                                <div class="widget-content">
+                                    <ul>   
+                                        <li><a href="#">Help centre</a></li>
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Tutorials</a></li>
+                                        <li><a href="#">Terms of Service</a></li>
+                                        <li><a href="#">Borrow</a></li>
+                                        <li><a href="#">Complaints Policy</a></li>
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div><!--~./ end links widget ~-->
+
+                        <!--~~~~~ Start Widget Links ~~~~~--> 
+                        <div class="col-lg-4">
+                            <aside class="widget widget_payment">
+                                <h2 class="widget-title">Payment Option</h2>
+                                <div class="widget-content">
+                                    <p>Dempor pede libero dapi useu class venenatis ut bibendum quam ut nibh necnullam. Nonhon Pede mollis vel vitae dolorurpis</p>
+                                    <div class="payment-barcode-area">
+                                        <div class="payment-accepted">
+                                            <img src="../shop/assets/images/payment/wallet-logo.png" alt="Wallet">
+                                            <p class="title">Accepted Here</p>
+                                        </div>
+                                        <div class="barcode-thumb">
+                                            <img src="../shop/assets/images/payment/barcode.png" alt="Bar Code">
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div><!--~./ end payment widget ~-->
+                    </div>
+                </div>
+            </div><!--~./ end footer widgets area ~-->
+
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Start Footer Bottom Area
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="copyright-text text-center">
+                                <p>Copyright  © 2020 . All rights reserved</p>
+                            </div><!--~./ end copyright text ~-->
+                        </div><!--~./ col-12 ~-->
+                    </div>
+                </div>
+            </div><!--~./ end footer bottom area ~-->
+        </footer><!--~./ end site footer ~-->
+    </div><!--~~./ end site content ~~-->
+
+    <!-- All The JS Files
+    ================================================== --> 
+    <script src="../shop/assets/js/jquery.js"></script>
+    <script src="../shop/assets/js/popper.min.js"></script>
+    <script src="../shop/assets/js/bootstrap.min.js"></script>
+    <script src="../shop/assets/js/plugins.js"></script>
+    <script src="../shop/assets/js/meanmenu.min.js"></script>
+    <script src="../shop/assets/js/particles.min.js"></script>
+    <script src="../shop/assets/js/imagesloaded.pkgd.min.js"></script> 
+    <script src="../shop/assets/js/jquery.nice-select.min.js"></script> 
+    <script src="../shop/assets/js/theia-sticky-sidebar.min.js"></script>
+    <script src="../shop/assets/js/ResizeSensor.min.js"></script>
+    <script src="../shop/assets/js/simple-scrollbar.min.js"></script>
+    <script src="../shop/assets/js/scrolla.jquery.min.js"></script>
+    <script src="../shop/assets/js/odometer.min.js"></script>
+    <script src="../shop/assets/js/isInViewport.jquery.js"></script>
+    <script src="../shop/assets/js/yscountdown.min.js"></script>
+    <script src="../shop/assets/js/owl.carousel.min.js"></script>
+    <script src="../shop/assets/js/main.js"></script><!-- main-js -->
 </body>
 </html>

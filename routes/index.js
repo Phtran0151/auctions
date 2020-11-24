@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   mongo.connect(path, (err, db) => {
     db.collection("products").find().toArray((err,result) => {
       let product = result;
-      res.render('index', { items: product });
+      res.render('index', { items: product })
     })
     db.close();
   })

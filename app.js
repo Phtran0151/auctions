@@ -54,6 +54,10 @@ app.use('/signout', require('./routes/users/destroy.dashboard'));
 app.use('/productsPost', require('./routes/products/post.products'));
 app.use('/productsAll', require('./routes/products/get.products'));
 app.use('/removeProducts', require('./routes/products/remove.products'));
+// App of middleware details router
+app.use('/about', require('./routes/about'));
+app.use('/blog', require('./routes/blog'));
+app.use('/contact', require('./routes/contact'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
