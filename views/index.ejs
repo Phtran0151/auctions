@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="../shop/assets/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="../shop/assets/css/icomoon.css">
   <link rel="stylesheet" href="../shop/assets/css/style.css">
+  <link rel="stylesheet" href="../stylesheets/sub_menu.css">
 
   <script src="../shop/assets/js/modernizr.min.js"></script>
 </head>
@@ -54,9 +55,7 @@
         </div><!-- /preloader-inner -->
     </div><!-- /preloader -->
 
-   <!--********************************************************-->
     <!--********************* SITE CONTENT *********************-->
-    <!--********************************************************-->
     <div class="site-content">
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             Start Site Header
@@ -83,12 +82,21 @@
                               <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                             </ul><!--~./ social-share ~-->
                           </div>
-                          <div class="user-registration-area">
+                          <div class="user-registration-area menu">
                             <% if (user) { %>
-                              <a class="user-reg-btn" href="/users/dashboard">
-                                <span class="icon-user-1"></span>
-                                  Dashboard
-                              </a>
+                              <ul class="primary">
+                                <li>
+                                  <a class="user-reg-btn" href="javascript:void(0)">
+                                  <span class="icon-user-1"></span>
+                                    <%= user.uname %>
+                                  </a>
+                                  <ul class="sub">
+                                    <li><a href="/users/dashboard">Profile</a></li>
+                                    <li><a href="/users/cart">Cart</a></li>
+                                    <li><a href="/signout">Log Out</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
                             <% } else { %>
                               <a class="user-reg-btn" href="/users/register">
                                 <span class="icon-user-1"></span>

@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
     req.session.destroy((err) => {
       delete req.session;
       res.clearCookie('user_sid');
-      res.redirect('/users/login') // will always fire after session is destroyed
+      res.redirect('/') // will always fire after session is destroyed
     })
   }
 });

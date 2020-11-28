@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
           id: result._id,
           uname: result.username
         }
-        res.redirect("users/dashboard");
+        res.redirect("/");
       } else {
         res.render("users/login")
       }
