@@ -17,7 +17,8 @@ app.set('view engine', 'ejs');
 
 // Session Express
 app.use(session({
-  secret: 'gradutes-finished',
+  key: 'user_sid',
+  secret: process.env.SECRET,
   resave: true,
   saveUninitialized: true,
   cookie: {
@@ -48,7 +49,7 @@ app.use('/users/register', require('./routes/users/get.register'));
 app.use('/signup', require('./routes/users/post.register'));
 app.use('/users/login', require('./routes/users/get.login'));
 app.use('/loginUsers', require('./routes/users/post.login'));
-app.use('/users/dashboard', require('./routes/auth').IsLoggedIn, require('./routes/users/get.dashboard'));
+app.use('/users/dashboard', require('./routes/users/get.dashboard'));
 app.use('/signout', require('./routes/users/destroy.dashboard'));
 // App of products
 app.use('/productsPost', require('./routes/products/post.products'));

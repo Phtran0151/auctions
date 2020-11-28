@@ -15,7 +15,7 @@
 
   <!-- Titles
   ================================================== -->
-  <title>Biddo - Bid And Auction HTML Template</title>
+  <title>Biddo - Bid And Auction Shop</title>
 
   <!-- Favicons
   ================================================== -->
@@ -84,6 +84,12 @@
                             </ul><!--~./ social-share ~-->
                           </div>
                           <div class="user-registration-area">
+                            <% if (user) { %>
+                              <a class="user-reg-btn" href="/users/dashboard">
+                                <span class="icon-user-1"></span>
+                                  Dashboard
+                              </a>
+                            <% } else { %>
                               <a class="user-reg-btn" href="/users/register">
                                 <span class="icon-user-1"></span>
                                   Register
@@ -92,6 +98,7 @@
                                 <span class="icon-user-1"></span>
                                   Login
                               </a>
+                            <% } %>
                           </div>
                         </div><!--~./ top-navbar-right ~-->
                       </div>

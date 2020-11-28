@@ -10,9 +10,13 @@ router.post('/', (req, res) => {
     db.collection("users").find().toArray((err, data) => {
       let result = data[0]
       if (name === result.username && bcrypt.compareSync(password, result.password)) {
-        res.render("users/dashboard", { uname: result.username, sess: req.session });
+        req.session.user = {
+          id: result._id,
+          uname: result.username
+        }
+        res.redirect("users/dashboard");
       } else {
-        res.render("users/register")
+        res.render("users/login")
       }
     })
   })
