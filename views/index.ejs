@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="../shop/assets/css/icomoon.css">
   <link rel="stylesheet" href="../shop/assets/css/style.css">
   <link rel="stylesheet" href="../stylesheets/sub_menu.css">
+  <link rel="stylesheet" href="../stylesheets/modals.css">
 
   <script src="../shop/assets/js/modernizr.min.js"></script>
 </head>
@@ -135,17 +136,17 @@
                                       </ul> <!-- /.menu-list -->
                                     </nav><!--/.menu-->
                                     <div class="header-navigation-right">
-                                        <div class="search-wrap">
-                                            <div class="search-btn">
-                                                <i class="fas fa-search"></i>
-                                            </div>
-                                            <div class="search-form">
-                                                <form action="#">
-                                                    <input type="search" placeholder="Search">
-                                                    <button type="submit"><i class="fas fa-search"></i> </button>
-                                                </form>
-                                            </div>
-                                        </div><!--~./ search-wrap ~-->
+                                      <div class="search-wrap">
+                                          <div class="search-btn">
+                                              <i class="fas fa-search"></i>
+                                          </div>
+                                          <div class="search-form">
+                                              <form action="#">
+                                                  <input type="search" placeholder="Search">
+                                                  <button type="submit"><i class="fas fa-search"></i> </button>
+                                              </form>
+                                          </div>
+                                      </div><!--~./ search-wrap ~-->
                                     </div>
                                 </div><!--~./ mainmenu-wrap ~-->
                             </div><!--~./ navigation-area ~-->
@@ -185,16 +186,15 @@
                             </div><!--~~./ page-header-caption ~~-->
                             <div class="breadcrumb-area">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="/">Home</a></li>  
-                                    <li class="breadcrumb-item active">deals</li>
+                                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                  <li class="breadcrumb-item active">deals</li>
                                 </ol>
                             </div><!--~~./ breadcrumb-area ~~-->
                         </div><!--~~./ page-header-content ~~-->
                     </div>
                 </div>
             </div><!--~~./ end container ~~-->
-        </div><!--~~./ end page title area ~~--> 
-
+        </div><!--~~./ end page title area ~~-->
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
             Start Deals Page Block
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -225,13 +225,15 @@
                           </div>
                         </div>
                         <div class="bid-button">
-                          <a class="btn btn-default bid_auction" href="#">Bid Now</a>
+                          <a class="btn btn-default bid_auction" href="javascript:void">Bid Now</a>
                         </div>
                       </div><!-- /.item-footer -->
                     </div><!-- /.auction-item -->
                   </div><!-- /.col-lg-4 -->
                 <% } %>
               </div><!-- /.row -->
+              <!-- Modal Product -->
+              <%- include ('partials/_productDetails.ejs') %>
                 <div class="row">
                   <div class="col-12">
                       <!--~~~~~ Start Paging Navigation ~~~~~-->
@@ -383,5 +385,6 @@
     <script src="../shop/assets/js/main.js"></script><!-- main-js -->
     <script src="../shop/assets/js/count-down.js"></script><!-- main-js -->
     <script src="../shop/assets/js/price.js"></script><!-- main-js -->
+    <script src="../javascripts/modals.js"></script><!-- main-js -->
 </body>
 </html>
