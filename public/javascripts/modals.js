@@ -2,14 +2,14 @@ $('.row-products').each(function(){
   let name = $(this).find('.name-product').html()
   let id = $(this).find('.auction-id').html()
   let price = $(this).find('.bid-price').html()
-  let times = $(this).find('.bid-timer').html()
+  let times = $(this).find('.bid-timer').clone()
   let image = $(this).find('.prod2').attr('src')
-  $(this).find('.bid_auction').one('click', function() {
-    //<!--------------- Change value of every product ---------- >
-    console.log(price)
+
+  // <!--------------- Change value of every product ----------------- >
+  $(this).find('.bid_auction').on('click', function() {
     $('.paypal').find('.name').html(name)
     $('.paypal').find('.price').html(price)
-    $('.paypal').find('.times').html(times)
+    // $(times).add(times).appendTo($('.paypal').find('.times'))
     $('.paypal').find('.paypal__subheader-wrapper').attr('src', image)
     $('.paypal').slideToggle("slow")
   })
