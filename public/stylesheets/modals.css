@@ -1,16 +1,20 @@
+.blur-body{
+ -webkit-filter:blur(5px);
+ filter:blur(5px);
+}
+
 .paypal {
   position: fixed;
   left: 50%;
   top: 0;
   display: none;
-  /*min-width: 500px;*/
-  /*height: 400px;*/
   max-width: 100%;
   width: auto;
   margin: 50px auto 25px;
   padding: 20px 0;
   clear: both;
   z-index: 1010;
+  opacity: 1.5 !important;
   align-items: center;
   justify-content: center;
 
@@ -62,8 +66,8 @@
 .paypal__date,
 .paypal__ref {
   display: block;
-  font-size: 19px;
-  color: #aaa;
+  font-size: 17px;
+  color: #008ae6;
   font-weight: 300;
 }
 
@@ -72,8 +76,10 @@
 }
 
 .paypal__subheader-wrapper {
+  width: 388.61px;
+  height: 309px;
   background: #fff;
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 
 .paypal__subheader {
@@ -115,7 +121,6 @@
   padding-top: 20px;
   margin-bottom: 20px;
   border-top: 2px dashed #aaa;
-
   font-size: 18px;
 }
 
@@ -142,6 +147,8 @@
 .paypal__item-price {
   float: right;
   letter-spacing: 1px;
+  border: 1px solid #4dd2ff;
+  border-radius: 3px;
 }
 
 .paypal__cart-total {

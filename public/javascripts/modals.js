@@ -1,7 +1,9 @@
 $('.bid_auction').on('click', function() {
-  $('.paypal').css({
-    'display': 'inline-block'
+  $('.auction-item').each(function(){
+    console.log('msg')
   })
+  $('.paypal').slideToggle("slow")
+  // $("body").toggleClass("blur-body").not('.paypal')
 })
 
 // Closed modals
