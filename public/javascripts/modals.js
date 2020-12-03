@@ -16,6 +16,6 @@ $('.row-products').each(function(){
 })
 
 // Closed modals
-$('.closed-button').click(function() {
+$('.closed-button').on('click', function() {
   $('.paypal').hide()
 })

@@ -10,7 +10,7 @@ body {
   padding: 0;
   color: #222222;
   background-color: #f2f2f0;
-  background-color: #56385a;
+  background-color: #0b0e3c;
   background-image: url("../images/cover.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@ a:hover {
 }
 
 .form-body {
-  background-color: #4a304d;
+  background-color: #669999;
   overflow: hidden;
   padding: 50px;
   color: #ffffff;
@@ -175,7 +175,7 @@ li.fb a::before {
 
 .the-form label {
   margin-bottom: 5px;
-  color: #e6e6e6;
+  color: aliceblue;
   font-weight: bold;
 }
 
@@ -215,7 +215,7 @@ li.fb a::before {
 }
 
 .the-form [type="submit"] {
-  background: #ffb37b;
+  background: beige;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 18px;
   font-size: 20px;
