@@ -57,6 +57,7 @@ app.use('/productsAll', require('./routes/products/get.products'));
 app.use('/removeProducts', require('./routes/products/remove.products'));
 // App of list the auction
 app.use('/bidders', require('./routes/auctions/get.auctions'));
+app.use('/auctions', require('./routes/auctions/post.auctions'));
 // App of middleware details router
 app.use('/about', require('./routes/about'));
 app.use('/blog', require('./routes/blog'));

@@ -306,3 +306,12 @@
 .paypal__cart-item:nth-child(4) {
   animation-delay: 3.2s;
 }
+
+.btn_bid {
+  padding: 6px 44px;
+  background: revert;
+}
+
+.btn_bid:hover{
+  background: #34ebe1;
+}

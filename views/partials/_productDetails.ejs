@@ -1,5 +1,5 @@
 <div class="paypal">
-  <form action="/auction">
+  <form action="/auctions" id="bidder_auction">
     <div class="paypal__header">
       <div class="paypal_closed">
         <span class="closed-button">x</span>
@@ -15,13 +15,16 @@
       </div>
     </div>
 
-    <img src="./uploads/1_undefined.jpg" class="paypal__subheader-wrapper" alt="You select product">
+    <img src="./uploads/1_undefined.jpg" class="paypal__subheader-wrapper images_bid" alt="You select product">
 
     <div class="paypal__cart">
       <ul class="paypal__cart-list">
         <li class="paypal__cart-item">
           <span class="paypal__cart-total">Bid Price:</span>
-          <input type="text" name="" value="" placeholder="" class="paypal__item-price">
+          <input type="text" value="" placeholder="" class="paypal__item-price bid_price">
+        </li>
+        <li class="paypal__cart-item">
+          <input type="submit" value="BID" class="paypal__item-price btn_bid">
         </li>
       </ul>
     </div>
