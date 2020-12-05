@@ -7,10 +7,12 @@ const path = require("../path.mongodb");
 router.post('/', (req, res, next) => {
   console.log(req.body)
   // mongo.connect(path, (err, db) => {
-  //   db.collection("auctions").find().toArray((err,result) => {
-  //     let product = result;
+  //   db.collection("auctions").insertOne(req.body, (err, result) => {
+  //     db.close();
+  //     if (!err) {
+
+  //     }
   //   })
-  //   db.close();
   // })
 });
 
