@@ -5,6 +5,7 @@ const path = require("../path.mongodb");
 
 /* POST auctions method. */
 router.post('/', (req, res, next) => {
+  console.log(req.session.user)
   console.log(req.body)
   // mongo.connect(path, (err, db) => {
   //   db.collection("auctions").insertOne(req.body, (err, result) => {
