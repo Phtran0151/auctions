@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Dashboard Users - Tables Products</title>
+  <title>Dashboard Users - Change Information</title>
 
   <!-- Custom fonts for this template -->
   <link href="../users/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -17,11 +17,23 @@
 
   <!-- Custom styles for this template -->
   <link href="../users/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="../users/css/profile-users.css" rel="stylesheet">
 
   <!-- Custom styles for this page -->
   <link href="../users/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
+<style type="text/css">
+  footer {
+    position: fixed;
+    bottom: 0px;
+    width: 90%;
+  }
+  footer.sticky-footer .copyright {
+    line-height: 2;
+    font-size: .9rem;
+  }
+</style>
 
 <body id="page-top">
 
@@ -58,8 +70,8 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item active">
-        <a class="nav-link collapsed" href="/users/dashboard" data-toggle="collapse" aria-expanded="true" aria-controls="collapseTwo">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="javascript:void(0)" data-toggle="collapse" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
           <span>My Carts</span>
         </a>
@@ -68,7 +80,7 @@
       <hr class="sidebar-divider">
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link collapsed" href="/users/profile">
           <i class="fas fa-fw fa-folder"></i>
           <span>Account</span>
@@ -287,62 +299,80 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Tables of products won</h1>
-          <p class="mb-4">List of products you have won</a>.</p>
-          <!-- DataTales Example -->
+          <h1 class="h3 mb-2 text-gray-800">Information Account</h1>
+          <p class="mb-4">Table to change user information</a>.</p>
+
+          <!---------------------- DataTales Example ------------------------------>
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">DataTables Products Win</h6>
+              <h6 class="m-0 font-weight-bold text-primary">The Update Profile Account </h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011/04/25</td>
-                      <td>$320,800</td>
-                    </tr>
-                    <tr>
-                      <td>Garrett Winters</td>
-                      <td>Accountant</td>
-                      <td>Tokyo</td>
-                      <td>63</td>
-                      <td>2011/07/25</td>
-                      <td>$170,750</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class='signup-container'>
+                  <div class='left-container'>
+                    <h1>
+                      <i class='fas fa-paw'></i>
+                      <%- user.fullname %>
+                    </h1>
+                    <div class='puppy'>
+                      <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png' class="avatar">
+                    </div>
+                  </div>
+                  <div class='right-container'>
+                    <form action="/profile" method="GET">
+                      <header>
+                        <div class='set'>
+                          <div class='pets-name'>
+                            <label for='pets-name'>FullName</label>
+                            <input id='pets-name' placeholder="Pet's name" value=<%- user.fullname %> type="text" disabled>
+                          </div>
+                          <div class='pets-photo'>
+                            <input type="file" id="upload" onchange="previewFile(this);" hidden/>
+                            <label for="upload" class="chooseFile">Upload Avatar</label>
+                          </div>
+                        </div>
+                        <div class='set'>
+                          <div class='pets-breed'>
+                            <label for='pets-breed'>Username</label>
+                            <input id='pets-breed' placeholder="Pet's breed" value=<%- user.uname %> type="text" disabled>
+                          </div>
+                          <div class='pets-birthday'>
+                            <label for='pets-birthday'>Birthday</label>
+                            <input id='pets-birthday' placeholder='MM/DD/YYYY' type='text'>
+                          </div>
+                        </div>
+                        <div class='set'>
+                          <div class='pets-gender'>
+                            <label for='pet-gender-female'>Gender</label>
+                            <div class='radio-container'>
+                              <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'>
+                              <label for='pet-gender-female'>Female</label>
+                              <input id='pet-gender-male' name='pet-gender' type='radio' value='male'>
+                              <label for='pet-gender-male'>Male</label>
+                            </div>
+                          </div>
+                          <div class='pets-gender'>
+                            <label for='pet-gender-female'>Phone</label>
+                            <input type="text" value=<%- user.phone %> disabled>
+                          </div>
+                        </div>
+                        <div class='set'>
+                          <div class="change-profile">
+                          </div>
+                          <div class="change-profile">
+                            <input type="submit" value="Change" class="btnProfile">
+                          </div>
+                        </div>
+                      </header>
+                    </form>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
+          <!-- End form Table to change user information -->
         </div>
-        <!-- /.container-fluid -->
-
       </div>
       <!-- End of Main Content -->
 
@@ -386,23 +416,15 @@
     </div>
   </div>
 
-  <!-- Bootstrap core JavaScript-->
+  <!-- JavaScript Files -->
   <script src="../users/vendor/jquery/jquery.min.js"></script>
   <script src="../users/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
   <script src="../users/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for all pages-->
   <script src="../users/js/sb-admin-2.min.js"></script>
-
-  <!-- Page level plugins -->
   <script src="../users/vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="../users/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Page level custom scripts -->
   <script src="../users/js/demo/datatables-demo.js"></script>
-
+  <script src="../users/js/uploadFile.js"></script>
 </body>
 
 </html>

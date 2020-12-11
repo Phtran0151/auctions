@@ -12,7 +12,10 @@ router.post('/', (req, res) => {
       if (name === result.username && bcrypt.compareSync(password, result.password)) {
         req.session.user = {
           id: result._id,
-          uname: result.username
+          email: result.email,
+          uname: result.username,
+          fullname: result.fullname,
+          phone: result.phone
         }
         res.redirect("/");
       } else {
