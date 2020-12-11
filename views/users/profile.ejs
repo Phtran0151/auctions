@@ -21,6 +21,7 @@
 
   <!-- Custom styles for this page -->
   <link href="../users/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link href="https://grantm.github.io/jquery-datetextentry/jquery.datetextentry.css" rel="stylesheet"/>
 
 </head>
 <style type="text/css">
@@ -320,7 +321,7 @@
                     </div>
                   </div>
                   <div class='right-container'>
-                    <form action="/profile" method="GET">
+                    <form action="/profile" id="updateProfile">
                       <header>
                         <div class='set'>
                           <div class='pets-name'>
@@ -346,22 +347,22 @@
                           <div class='pets-gender'>
                             <label for='pet-gender-female'>Gender</label>
                             <div class='radio-container'>
-                              <input checked='' id='pet-gender-female' name='pet-gender' type='radio' value='female'>
+                              <input checked='' id='pet-gender-female' name='gender' type='radio' value='female'>
                               <label for='pet-gender-female'>Female</label>
-                              <input id='pet-gender-male' name='pet-gender' type='radio' value='male'>
+                              <input id='pet-gender-male' name='gender' type='radio' value='male'>
                               <label for='pet-gender-male'>Male</label>
                             </div>
                           </div>
                           <div class='pets-gender'>
                             <label for='pet-gender-female'>Phone</label>
-                            <input type="text" value=<%- user.phone %> disabled>
+                            <input type="text" value=<%- user.phone %> id="numberPhone" disabled>
                           </div>
                         </div>
                         <div class='set'>
                           <div class="change-profile">
                           </div>
                           <div class="change-profile">
-                            <input type="submit" value="Change" class="btnProfile">
+                            <input type="submit" value="Change">
                           </div>
                         </div>
                       </header>
@@ -425,6 +426,8 @@
   <script src="../users/vendor/datatables/dataTables.bootstrap4.min.js"></script>
   <script src="../users/js/demo/datatables-demo.js"></script>
   <script src="../users/js/uploadFile.js"></script>
+  <script src="../users/js/profile.js"></script>
+  <script src="https://grantm.github.io/jquery-datetextentry/jquery.datetextentry.js"></script>
 </body>
 
 </html>

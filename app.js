@@ -51,6 +51,7 @@ app.use('/users/login', require('./routes/users/get.login'));
 app.use('/loginUsers', require('./routes/users/post.login'));
 app.use('/users/dashboard', require('./routes/users/get.dashboard'));
 app.use('/users/profile', require('./routes/users/get.profile'));
+app.use('/profile', require('./routes/users/put.profile'));
 app.use('/signout', require('./routes/users/destroy.dashboard'));
 // App of products
 app.use('/productsPost', require('./routes/products/post.products'));

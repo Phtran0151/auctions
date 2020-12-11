@@ -8,3 +8,11 @@ function previewFile(input){
     reader.readAsDataURL(file);
   }
 }
+
+$(function(){
+  $('#pets-birthday').datetextentry({
+    min_year         : '1900',
+    max_date         : function() { return this.get_today(); },
+    max_date_message : 'Date must not be in the future'
+  })
+})
