@@ -15,7 +15,8 @@ router.post('/', (req, res) => {
           email: result.email,
           uname: result.username,
           fullname: result.fullname,
-          phone: result.phone
+          phone: result.phone,
+          avatar: result.avatar
         }
         res.redirect("/");
       } else {

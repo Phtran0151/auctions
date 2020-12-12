@@ -272,7 +272,11 @@
           <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
-              <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              <% if (user) { %>
+                <img class="img-profile rounded-circle" src=<%- user.avatar %>>
+              <% } else { %>
+                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+              <% } %>
             </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -321,7 +325,7 @@
                     </div>
                   </div>
                   <div class='right-container'>
-                    <form action="/profile" id="updateProfile">
+                    <form action="/profile" id="updateProfile" method="POST" enctype="multipart/form-data">
                       <header>
                         <div class='set'>
                           <div class='pets-name'>
@@ -329,8 +333,9 @@
                             <input id='pets-name' placeholder="Pet's name" value=<%- user.fullname %> type="text" disabled>
                           </div>
                           <div class='pets-photo'>
-                            <input type="file" id="upload" name="avatar" onchange="previewFile(this);" hidden/>
-                            <label for="upload" class="chooseFile">Upload Avatar</label>
+                            <span class="btn btn-primary btn-file">
+                              Choose avatar...<input type="file" id="upload" name="avatar" onchange="previewFile(this);" />
+                            </span>
                           </div>
                         </div>
                         <div class='set'>
@@ -340,7 +345,7 @@
                           </div>
                           <div class='pets-birthday'>
                             <label for='pets-birthday'>Birthday</label>
-                            <input id='pets-birthday' placeholder='MM/DD/YYYY' type='text'>
+                            <input id='pets-birthday' name="birthday" placeholder='MM/DD/YYYY' type='text'>
                           </div>
                         </div>
                         <div class='set'>
@@ -362,7 +367,7 @@
                           <div class="change-profile">
                           </div>
                           <div class="change-profile">
-                            <input type="submit" value="Change">
+                            <input type="submit" value="Update">
                           </div>
                         </div>
                       </header>
@@ -418,6 +423,7 @@
   </div>
 
   <!-- JavaScript Files -->
+  <script src="../javascripts/js-admin/jquery.min.js"></script>
   <script src="../users/vendor/jquery/jquery.min.js"></script>
   <script src="../users/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../users/vendor/jquery-easing/jquery.easing.min.js"></script>
