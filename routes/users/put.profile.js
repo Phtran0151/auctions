@@ -18,13 +18,16 @@ router.post('/', upload.single('avatar'), (req, res, next) => {
     birthday: new Date(req.body.birthday),
   }
   mongo.connect(pathMongo, (err, db) => {
-    profile.avatar = req.file.path.split("public").join(".")
+    profile.avatar = req.file.path.split("public").join("..")
     for (let i = 0; i < Object.keys(profile).length; i++) {
       if(!(isNaN(Object.values(profile)[i])) && Object.keys(profile)[i] !== "tel"){
         profile[`${Object.keys(profile)[i]}`] = Number(Object.values(profile)[i]);
       }
     }
-    db.collection('users').update({_id: ObjectId(id)}, { $set: profile }, (err, result) => {
+    db.collection('users').update({_id: ObjectId(id)},
+      { $set: profile },
+      { avatar: { $exists: true, $nin: profile.avatar } },
+      (err, result) => {
       db.close();
       if (!err) {
         res.render('users/profile')
