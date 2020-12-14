@@ -7,6 +7,7 @@ const ObjectId = require('mongodb').ObjectId;
 const avatarImage = require('../config/avatar.images');
 const storage = multer.diskStorage(avatarImage)
 const upload = multer({ storage: storage });
+const fs = require('fs');
 
 /* UPDATE account POST method. */
 router.post('/', upload.single('avatar'), (req, res, next) => {
